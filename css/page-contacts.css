@@ -1,0 +1,209 @@
+#map {
+  width: 51.25vw;
+  height: 28.020833vw;
+}
+
+.ymaps-2-1-79-copyright.ymaps-2-1-79-copyright_logo_no {
+  display: none !important;
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none !important;
+}
+
+.ymaps-2-1-79-ground-pane {
+  /* filter: hue-rotate(257deg) grayscale(1) invert(100%); */
+  -webkit-filter: hue-rotate(257deg) grayscale(100%) invert(100%) contrast(0.7) brightness(130%);
+          filter: hue-rotate(257deg) grayscale(100%) invert(100%) contrast(0.7) brightness(130%);
+}
+
+/* .ymaps-2-1-79-image {
+    left: -49px;
+    top: -128px;
+  } */
+.contacts {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.contacts .contacts_form__info__img_gradient {
+  display: none;
+}
+
+.contact-details_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+}
+
+.contact-details {
+  padding-top: 23.3rem;
+  margin: 0;
+}
+.contact-details__gradient_map {
+  position: absolute;
+  width: 61.6145833vw;
+  height: 58.333vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.contact-details__gradient_map svg {
+  width: 100%;
+  height: 100%;
+}
+.contact-details__gradient_info {
+  position: absolute;
+  width: 25.9375vw;
+  right: 10rem;
+  height: 19.947916vw;
+  top: 10rem;
+  -webkit-transform: rotate(-154.06deg);
+          transform: rotate(-154.06deg);
+  -webkit-filter: blur(10rem);
+          filter: blur(10rem);
+  z-index: -1;
+}
+.contact-details__gradient_info svg {
+  width: 100%;
+  height: 100%;
+}
+.contact-details__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact-details__info-title {
+  padding-bottom: 7.8rem;
+  font-family: "akzidenz-grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.6041vw;
+  color: #ffffff;
+}
+.contact-details__info__requisites {
+  width: 27.8645833vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+.contact-details__info__requisites__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6rem;
+}
+.contact-details__info__requisites__item-name {
+  font-weight: 600;
+  font-size: 0.9375vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact-details__info__requisites__item-title {
+  font-size: 1.25vw;
+  color: #ffffff;
+  font-family: "akzidenz-grotesk";
+}
+
+@media (max-width: 48em) {
+  #map {
+    width: 100%;
+    height: 80vw;
+  }
+  .contacts .contacts_form__info__img_gradient {
+    display: block;
+  }
+  .contact-details {
+    padding-top: 28.8rem;
+    margin-bottom: 4rem;
+  }
+  .contact-details__gradient_map {
+    width: 98.1333vw;
+    height: 87.333vw;
+    left: -15rem;
+    top: 23rem;
+    -webkit-filter: blur(13rem);
+            filter: blur(13rem);
+    left: -16rem;
+  }
+  .contact-details__gradient_info {
+    width: 98.1333vw;
+    height: 93.6vw;
+    top: 147rem;
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
+    right: -34rem;
+  }
+  .contact-details_container {
+    gap: 8rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact-details__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-details__info-title {
+    padding-bottom: 4.8rem;
+    font-family: "akzidenz-grotesk";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7.2vw;
+    color: #ffffff;
+  }
+  .contact-details__info__requisites {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4.9rem;
+  }
+  .contact-details__info__requisites__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.6rem;
+  }
+  .contact-details__info__requisites__item-name {
+    font-weight: 600;
+    font-size: 4.2666vw;
+  }
+  .contact-details__info__requisites__item-title {
+    font-weight: 700;
+    font-size: 4.8vw;
+  }
+}

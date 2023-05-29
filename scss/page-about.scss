@@ -1,0 +1,406 @@
+.about {
+  padding-top: 17.5rem;
+  margin: 0;
+  overflow: hidden;
+  &_container {
+    width: 100%;
+    padding-left: 8.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.about_aim {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rem;
+  &_container {
+    width: 100%;
+    padding-left: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__complex {
+    width: 30.885417vw;
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.2rem;
+  }
+  &-title {
+    font-family: 'akzidenz-grotesk';
+    font-weight: 700;
+    font-size: 2.604166vw;
+    color: #f9fbfe;
+  }
+  &-subtitle {
+    font-weight: 500;
+    font-size: 0.78125vw;
+    color: #f9fbfe;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 2.1rem;
+    padding-top: 2.6rem;
+    &-text {
+      font-weight: 600;
+      font-size: 0.78125vw;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+  &__projects {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  &__advantage {
+    position: absolute;
+    bottom: -5rem;
+    left: -7.5rem;
+    width: 11.45833vw;
+    height: 7.86458333vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.6rem;
+    background: #fff;
+    padding: 2.2rem 1.2rem 2.2rem 2.2rem;
+    &-title {
+      font-family: 'akzidenz-grotesk';
+      font-weight: 700;
+      font-size: 1.25vw;
+      color: #222222;
+    }
+    &-subscription {
+      font-weight: 500;
+      font-size: 0.78125vw;
+      color: #a1acb9;
+    }
+  }
+  &__project {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    &-img {
+      width: 28.229166vw;
+      height: 26.25vw;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.about_company {
+  position: relative;
+  &_container {
+    width: 100%;
+    padding: 0rem 7.5rem;
+  }
+  &-title {
+    padding-bottom: 8.4rem;
+    font-family: 'akzidenz-grotesk';
+    font-weight: 700;
+    font-size: 2.604166vw;
+    color: #ffffff;
+  }
+  &__gradient {
+    position: absolute;
+    top: -60rem;
+    left: -8rem;
+    filter: blur(11rem);
+    // height: 72.91666vw;
+    // width: 92.1666vw;
+    height: 62.91666vw;
+    width: 107.1666vw;
+    z-index: -1;
+    img {
+      height: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &-img {
+      width: 43.59375vw;
+      height: 36.09375vw;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44.375vw;
+    &_text {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 1.25vw;
+      color: #f9fbfe;
+    }
+    &-subscription {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-weight: 500;
+      font-size: 0.9375vw;
+      color: #f9fbfe;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+
+    &-work {
+      display: flex;
+      align-items: flex-end;
+      font-weight: 500;
+      font-size: 0.9375vw;
+      color: #ffffff;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    &-img {
+      width: 20.5729166vw;
+    }
+  }
+}
+.about_advantages {
+  padding-top: 2rem;
+  margin: 0;
+  &_container {
+    display: flex;
+    flex-direction: column;
+    gap: 8.5rem;
+  }
+  &-title {
+    font-family: 'akzidenz-grotesk';
+    font-weight: 700;
+    font-size: 2.604166vw;
+    color: #f9fbfe;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    &-advantage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 10.6rem 5rem 12.1rem 5rem;
+      width: 20.520833vw;
+      height: 15.3645833vw;
+      -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+      -moz-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+      box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -0.6rem;
+        left: -2.5rem;
+        width: 3.12083vw;
+        height: 3.6rem;
+        background-color: #101010;
+        transform: rotate(309deg);
+        -webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.2) inset;
+        -moz-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
+      }
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 1.25vw;
+      color: #f9fbfe;
+    }
+    &-gradient {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}
+.btn-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6979166vw;
+  height: 3.6979166vw;
+  background: #ffffff;
+  box-shadow: 8px 5px 60px rgba(205, 66, 83, 0.3);
+  border-radius: 1000px;
+  svg {
+    width: 1.145833vw;
+    height: 1.145833vw;
+  }
+}
+@media (max-width: 48em) {
+  .about {
+    padding-top: 23rem;
+    &_aim {
+      padding-top: 3.2rem;
+      margin-bottom: 30rem;
+      &_container {
+        padding: 0 2rem;
+        flex-direction: column;
+      }
+      &-title {
+        font-weight: 700;
+        font-size: 7.2vw;
+        line-height: 125%;
+        color: #f9fbfe;
+      }
+      &-subtitle {
+        font-weight: 500;
+        font-size: 3.733vw;
+        color: #f9fbfe;
+      }
+      &__complex {
+        width: 100%;
+      }
+      &__btn {
+        gap: 4.2rem;
+        &-text {
+          font-weight: 600;
+          font-size: 2.9333vw;
+        }
+      }
+      &__project {
+        padding-top: 8rem;
+        // flex-direction: column;
+        gap: 2rem;
+        &-img {
+          width: 100%;
+        }
+      }
+      &__advantage {
+        left: 20rem;
+        bottom: -17rem;
+        width: 41.6vw;
+        height: 44vw;
+        &-title {
+          // font-weight: 700;
+          font-size: 4.8vw;
+        }
+        &-subscription {
+          // font-weight: 500;
+          font-size: 3.733vw;
+        }
+      }
+    }
+    &_company {
+      &__gradient {
+        top: -119rem;
+        left: -2rem;
+        -webkit-filter: blur(11rem);
+        filter: blur(6rem);
+        height: 262.91666vw;
+        width: 267.1666vw;
+        z-index: -1;
+      }
+      &_container {
+        padding: 0 2rem;
+      }
+
+      &-title {
+        font-family: 'akzidenz-grotesk';
+        padding-bottom: 8rem;
+        font-weight: 700;
+        font-size: 7.2vw;
+      }
+      &__content {
+        flex-direction: column-reverse;
+        gap: 8rem;
+        &-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__info {
+        width: 100%;
+        &_text {
+          gap: 4rem;
+        }
+        &-title {
+          font-family: 'akzidenz-grotesk';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 4.8vw;
+        }
+        &-subscription {
+          font-weight: 500;
+          font-size: 3.733vw;
+        }
+      }
+      &__footer {
+        display: none;
+      }
+    }
+    &_advantages {
+      &_container {
+        padding: 0 2rem;
+      }
+      &-title {
+        font-family: 'akzidenz-grotesk';
+        font-weight: 700;
+        font-size: 7.2vw;
+      }
+      &__list {
+        flex-wrap: wrap;
+        gap: 1.8rem;
+        &-gradient {
+          background: linear-gradient(
+            154.42deg,
+            rgb(71 11 54 / 21%) 47.6%,
+            rgba(34, 34, 34, 0) 83.86%
+          );
+          img {
+            height: 100%;
+            filter: opacity(0.7);
+          }
+        }
+        &-title {
+          font-weight: 500;
+          font-size: 3.733vw;
+        }
+        &-advantage {
+          justify-content: flex-start;
+          padding: 10.2rem 2.4rem 5.6rem 2.4rem;
+          width: 46.1333vw;
+          height: 41.3333vw;
+          overflow: hidden;
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+          color: transparent;
+          &::after {
+            top: -0.6rem;
+            left: -2.5rem;
+            width: 7.82083vw;
+          }
+        }
+      }
+    }
+  }
+  .btn-about {
+    width: 14.4vw;
+    height: 14.4vw;
+    transition: all 0.3s;
+    svg {
+      width: 4.266666vw;
+      height: 4.266666vw;
+    }
+    &:hover {
+      background-color: #d01181;
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+}

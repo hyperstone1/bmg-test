@@ -1,0 +1,303 @@
+@font-face {
+  font-family: 'Euclid Circular A';
+  font-weight: 300;
+  src: url('../fonts/Euclid Circular A Light.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Euclid Circular A';
+  font-weight: 400;
+  src: url('../fonts/Euclid Circular A Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  src: url('../fonts/Euclid Circular A Medium.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Euclid Circular A';
+  font-weight: 600;
+  src: url('../fonts/Euclid Circular A SemiBold.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Euclid Circular A';
+  font-weight: 700;
+  src: url('../fonts/Euclid Circular A Bold.ttf') format('ttf');
+}
+body {
+  // overflow: hidden;
+}
+
+.contacts_form {
+  position: relative;
+  padding-top: 20.2rem;
+  // margin-bottom: 20rem;
+  padding-bottom: 20rem;
+  // overflow: hidden;
+  overflow: hidden;
+
+  &_gradient {
+    position: absolute;
+    width: 17.1354166vw;
+    height: 12.08333vw;
+    // left: 16rem;
+    // top: 30rem;
+    left: 23rem;
+    top: 38rem;
+    z-index: -1;
+    -webkit-filter: blur(10rem);
+    filter: blur(8rem);
+    transform: rotate(-154.06deg);
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    // gap: 10.5rem;
+    gap: 5.7rem;
+    &-request_title {
+      display: none;
+      font-size: 7.2vw;
+      font-family: 'akzidenz-grotesk';
+      font-weight: 700;
+      color: #f9fbfe;
+    }
+    &-title {
+      position: relative;
+      display: flex;
+      align-items: end;
+      font-weight: 600;
+      font-size: 0.9375vw;
+      line-height: 1.2;
+      color: #d01181;
+      width: 12.0479166vw;
+      span {
+        span {
+          display: inherit;
+        }
+      }
+    }
+    &-img {
+      width: 38.489583vw;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 5.6rem;
+      // margin-bottom: 5.6rem;
+      flex: 1;
+      font-weight: 700;
+      font-size: 1.25vw;
+      text-align: right;
+      color: #ffffff;
+    }
+    &__img_gradient {
+      position: absolute;
+      right: -2rem;
+      z-index: -1;
+      top: -10rem;
+      width: 27.8125vw;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      // background: linear-gradient(164.53deg, #86a4bf 27.69%, rgba(165, 198, 228, 0) 66.52%),
+      //   #d01181;
+      // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      // filter: blur(36px);
+      // transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    &-info {
+      width: 18.4375vw;
+      margin-left: auto;
+    }
+    &__email {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-family: 'akzidenz-grotesk';
+      font-weight: 700;
+      font-size: 2.604166666vw;
+      line-height: 130%;
+      color: #ffffff;
+
+      svg {
+        width: 2.2395833vw;
+      }
+    }
+  }
+}
+.email-contacts_form {
+  transition: all 0.4s;
+  &:hover {
+    color: #d01181;
+  }
+}
+
+.request {
+  padding: 3.2rem 0rem 2.5rem 0rem;
+  &__title {
+    font-family: 'akzidenz-grotesk';
+    font-weight: 700;
+    font-size: 2.60416666vw;
+    line-height: 1.3;
+    color: #f9fbfe;
+  }
+  &_form {
+    padding-top: 7.8rem;
+    &__form {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      &-inp {
+        width: 12.760416vw;
+        height: fit-content;
+        font-weight: 600;
+        font-size: 0.9375vw;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1.6rem 2rem;
+        &:focus {
+          border: 1px solid #d01181;
+        }
+        &:last-of-type {
+          width: 37.65625vw;
+        }
+        &::placeholder {
+          color: #fff;
+        }
+      }
+
+      &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 21px;
+        &-text {
+          display: none;
+          font-weight: 600;
+          font-size: 2.93333vw;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+.btn-detailed {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.697916666vw;
+  height: 3.697916666vw;
+  // padding: 2.8rem;
+  background: #d01181;
+  box-shadow: 8px 5px 60px rgba(205, 66, 83, 0.3);
+  border-radius: 50%;
+  svg {
+    width: 0.9375vw;
+  }
+}
+@media (max-width: 48em) {
+  .contacts_form {
+    padding-top: 14rem;
+    padding-bottom: 18rem;
+    &_gradient {
+      display: block;
+      width: 98.4vw;
+      height: 70.9333vw;
+      bottom: 27rem;
+      top: auto;
+      left: -20rem;
+      z-index: -1;
+      -webkit-filter: blur(10rem);
+      filter: blur(11rem);
+      transform: rotate(0deg);
+    }
+
+    &__info {
+      flex-direction: column;
+      &-request_title {
+        display: block;
+      }
+      &-title {
+        width: 100%;
+        font-size: 4.8vw;
+        span {
+          span {
+            display: inline;
+          }
+        }
+      }
+      &-img {
+        width: 66.66vw;
+      }
+      &_description {
+        align-items: flex-start;
+        text-align: left;
+      }
+      &__img_gradient {
+        width: 82.6666vw;
+        width: 110.133vw;
+        top: -28rem;
+        right: auto;
+        left: 0;
+        img {
+          filter: blur(27px);
+        }
+      }
+      &-info {
+        width: 100%;
+        font-size: 4.8vw;
+      }
+      &__email {
+        font-size: 7.2vw;
+        svg {
+          width: 11.46666vw;
+        }
+      }
+    }
+  }
+  .request {
+    padding-bottom: 0;
+    &__title {
+      display: none;
+    }
+    &_form {
+      &__form {
+        flex-direction: column;
+        &-inp {
+          width: 100%;
+          font-size: 3.733vw;
+          &:last-of-type {
+            width: 100%;
+          }
+        }
+        &__btn {
+          width: 100%;
+          justify-content: start;
+          &-text {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .btn-detailed {
+    width: 14.4vw;
+    height: 14.4vw;
+    svg {
+      width: 4.2666vw;
+    }
+  }
+}
