@@ -245,6 +245,10 @@
 @media (max-width: 48em) {
   .about {
     padding-top: 23rem;
+    &_container {
+      flex-direction: column;
+      padding: 0 2rem;
+    }
     &_aim {
       padding-top: 3.2rem;
       margin-bottom: 30rem;

@@ -341,6 +341,13 @@
   .about {
     padding-top: 23rem;
   }
+  .about_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 2rem;
+  }
   .about_aim {
     padding-top: 3.2rem;
     margin-bottom: 30rem;
