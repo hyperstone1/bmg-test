@@ -245,6 +245,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Слушатели на ресайз и загрузку страницы
   window.addEventListener('resize', addSlider);
-  window.addEventListener('onload', addSlider);
+  window.addEventListener('load', addSlider);
   addSlider();
 });

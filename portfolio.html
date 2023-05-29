@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/page-news.css" />
+    <link rel="stylesheet" href="./css/page-portfolio.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="./js/header.js"></script>
 
     <title>Новости</title>
@@ -391,7 +392,7 @@
           <div class="container_menu">
             <nav class="mobile-nav">
               <li class="navbar__menu-link"><a href="#">Услуги</a></li>
-              <li class="navbar__menu-link"><a href="#">Портфолио</a></li>
+              <li class="navbar__menu-link"><a href="./portfolio.html">Портфолио</a></li>
               <li class="navbar__menu-link"><a href="./about.html">О компании</a></li>
               <li class="navbar__menu-link"><a href="#">Новости</a></li>
               <li class="navbar__menu-link"><a href="./contacts.html">Контакты</a></li>
@@ -402,7 +403,7 @@
           <nav class="navbar">
             <ul class="navbar__menu">
               <li class="navbar__menu-link"><a href="#">Услуги</a></li>
-              <li class="navbar__menu-link"><a href="#">Портфолио</a></li>
+              <li class="navbar__menu-link"><a href="./portfolio.html">Портфолио</a></li>
               <li class="navbar__menu-link"><a href="./about.html">О компании</a></li>
               <li class="navbar__menu-link"><a href="#">Новости</a></li>
               <li class="navbar__menu-link"><a href="./contacts.html">Контакты</a></li>
@@ -418,13 +419,227 @@
       </div>
     </header>
     <section class="portfolio">
-      <div class="portfolio-gradient">
-        <img src="./images/news/news_gradient.png" alt="" />
-      </div>
+      <section class="portfolio_main">
+        <div class="portfolio_main-gradient">
+          <img src="./images/portfolio/portfolio_gradient.png" alt="" />
+        </div>
+        <div class="portfolio_main_container">
+          <div class="portfolio_main__info">
+            <div class="portfolio_main__info-title">
+              <p>Персональная</p>
+              <p>управляющая</p>
+              <p>компания</p>
+              <p>BMG</p>
+            </div>
+            <div class="portfolio_main__info_advantage">
+              <div class="portfolio_main__info_advantage-title">10 лет</div>
+              <div class="portfolio_main__info_advantage-description">
+                успешно осуществляем деятельность в России
+              </div>
+            </div>
+          </div>
+          <div class="portfolio_main__img">
+            <img src="./images/portfolio/portfolio.png" alt="Портфолио" />
+            <div class="portfolio_main__img-title">наши проекты</div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio_projects">
+        <div class="portfolio_projects_container">
+          <div class="portfolio_projects__title">
+            <div class="portfolio_projects__title-title">Проекты нашей компании</div>
+            <div class="portfolio_projects__title-subtitle">
+              Отлаженный механизм взаимодействия служб и подразделений для реализации управленческих
+              целей
+            </div>
+          </div>
+          <div class="portfolio_projects__filter">
+            <ul class="portfolio_projects-filter">
+              <li class="portfolio_projects__filter-category active_category">Все</li>
+              <li class="portfolio_projects__filter-category">Управление</li>
+              <li class="portfolio_projects__filter-category">Консультационные услуги</li>
+            </ul>
+          </div>
 
-
+          <div class="portfolio_projects__projects">
+            <div class="portfolio_projects__projects-item">
+              <div class="portfolio_projects__projects-img">
+                <img src="./images/portfolio/tc_vodniy.png" alt="" />
+              </div>
+              <div class="portfolio_projects__projects_text">
+                <div class="portfolio_projects__projects_text-title">ТЦ Водный</div>
+                <div class="portfolio_projects__projects_text-subtitle">
+                  Современный торговый центр с ярким и привлекательным дизайном
+                </div>
+                <div class="portfolio_projects__projects_text-description">
+                  Многофункциональный комплекс, созданный для гармоничной и комфортной жизни.
+                  <b
+                    >Имеет 4 торговых уровня, общую площадь около 83 000 кв.м и наземную парковку на
+                    805 м/м.</b
+                  >
+                  Комплекс находится в г. Москва по адресу Головинское ш. д. 5, корп. 1, метро
+                  Водный стадион.
+                </div>
+              </div>
+              <div class="portfolio_projects__projects-category">
+                <div class="portfolio_projects__projects-category_gradient">
+                  <img src="./images/portfolio/category_gradient.png" alt="" />
+                </div>
+                <span>Комплексное управление</span>
+              </div>
+            </div>
+            <div class="portfolio_projects__projects-item">
+              <div class="portfolio_projects__projects-img">
+                <img src="./images/portfolio/tc_yasniy.png" alt="" />
+              </div>
+              <div class="portfolio_projects__projects_text">
+                <div class="portfolio_projects__projects_text-title">ТЦ Ясный</div>
+                <div class="portfolio_projects__projects_text-subtitle">
+                  Торговый центр является частью многофункционального комплекса
+                </div>
+                <div class="portfolio_projects__projects_text-description">
+                  Он выступает важной частью современного многофункционального жилого комплекса
+                  «ЯСНЫЙ», созданного для гармоничной и комфортной жизни.
+                  <b
+                    >Имеет 1 торговый уровень, общую площадь около 6000 кв.м и подземную парковку на
+                    60 м/м.</b
+                  >
+                  Комплекс был разработан именитым международным архитектурным бюро Speech, на счету
+                  которого – множество успешно реализованных проектов в Берлине, Венеции, Милане и
+                  других европейских городах.
+                </div>
+              </div>
+              <div class="portfolio_projects__projects-category">
+                <div class="portfolio_projects__projects-category_gradient">
+                  <img src="./images/portfolio/category_gradient.png" alt="" />
+                </div>
+                <span>Комплексное управление</span>
+              </div>
+            </div>
+            <div class="portfolio_projects__projects-item">
+              <div class="portfolio_projects__projects-img">
+                <img src="./images/portfolio/bc_danilovskiy.png" alt="" />
+              </div>
+              <div class="portfolio_projects__projects_text">
+                <div class="portfolio_projects__projects_text-title">БЦ Даниловский форт</div>
+                <div class="portfolio_projects__projects_text-subtitle">
+                  Даниловский Форт» - это бизнес центр класса В+
+                </div>
+                <div class="portfolio_projects__projects_text-description">
+                  За оригинальностью архитектуры этот необычный офисный комплекс был номинирован на
+                  премию «Дом года - 2009», учрежденную журналом «Made in Future».
+                  <b>Имеет общую площадь около 14 000 кв.м и подземную парковку на 150 м/м.</b>
+                  Бизнес центр находится на земельном участке площадью 8 211 кв.м.
+                </div>
+              </div>
+              <div class="portfolio_projects__projects-category">
+                <div class="portfolio_projects__projects-category_gradient">
+                  <img src="./images/portfolio/category_gradient.png" alt="" />
+                </div>
+                <span>Комплексное управление</span>
+              </div>
+            </div>
+            <div class="portfolio_projects__projects-item">
+              <div class="portfolio_projects__projects-img">
+                <img src="./images/portfolio/bc_chayka.png" alt="" />
+              </div>
+              <div class="portfolio_projects__projects_text">
+                <div class="portfolio_projects__projects_text-title">БЦ Чайка плаза</div>
+                <div class="portfolio_projects__projects_text-subtitle">
+                  Бизнес-центр класса «B+» в Донском районе Москвы (ЮАО)
+                </div>
+                <div class="portfolio_projects__projects_text-description">
+                  Бизнес Центр Чайка Плаза относятся в основном к В классу и располагаются на
+                  центральных станциях метро. Архитектура зданий разнообразна, но большая часть
+                  выражена в стиле модерна.
+                  <b
+                    >Имеет 4 этажа, общую площадь около 25 000 кв.м и наземную парковку на 118
+                    м/м.</b
+                  >
+                  Бизнес-центр был реконструирован в лучших традициях стиля «модерн» на базе старых
+                  корпусов в 2007 году.
+                </div>
+              </div>
+              <div class="portfolio_projects__projects-category">
+                <div class="portfolio_projects__projects-category_gradient">
+                  <img src="./images/portfolio/category_gradient.png" alt="" />
+                </div>
+                <span>Комплексное управление</span>
+              </div>
+            </div>
+            <div class="portfolio_projects__projects-item">
+              <div class="portfolio_projects__projects-img">
+                <img src="./images/portfolio/tc_discovery.png" alt="" />
+              </div>
+              <div class="portfolio_projects__projects_text">
+                <div class="portfolio_projects__projects_text-title">ТЦ Discovery</div>
+                <div class="portfolio_projects__projects_text-subtitle">
+                  Discovery — это три уровня торговой галереи в ЖК Discovery Park.
+                </div>
+                <div class="portfolio_projects__projects_text-description">
+                  Новый трёхэтажный молл, входящий в состав ЖК Discovery Park и расположенный на
+                  пересечении одного из крупнейших транспортно-пересадочных узлов Москвы - ТПУ
+                  «Ховрино».
+                  <b
+                    >Имеет 3 торговых уровня, общую площадь около 18 000 кв.м и подземную парковку
+                    на 231 м/м.</b
+                  >
+                  Бизнес центр находится в г.Москва, ул. Дыбенко, дом 7/1
+                </div>
+              </div>
+              <div class="portfolio_projects__projects-category">
+                <div class="portfolio_projects__projects-category_gradient">
+                  <img src="./images/portfolio/category_gradient.png" alt="" />
+                </div>
+                <span>Комплексное управление</span>
+              </div>
+            </div>
+            <div class="portfolio_projects__projects-item">
+              <div class="portfolio_projects__projects-img">
+                <img src="./images/portfolio/danilov_plaza.png" alt="" />
+              </div>
+              <div class="portfolio_projects__projects_text">
+                <div class="portfolio_projects__projects_text-title">Данилов Плаза</div>
+                <div class="portfolio_projects__projects_text-subtitle">
+                  БЦ "Данилов плаза" входит в состав офисно-гостиничного комплекса «Danilov Plaza»
+                </div>
+                <div class="portfolio_projects__projects_text-description">
+                  Из окон обоих корпусов открывается живописный вид на Москва-реку и старинный лофт
+                  квартал Даниловской Мануфактуры.
+                  <b>
+                    Имеет 13 этажей, общую площадь около 40 000 кв.м и подземную парковку на 450
+                    м/м.
+                  </b>
+                  Архитектурное решение комплекса «Danilov Plaza» разработано известным
+                  архитектурным бюро SPEECH Чобан&Кузнецов.
+                </div>
+              </div>
+              <div class="portfolio_projects__projects-category">
+                <div class="portfolio_projects__projects-category_gradient">
+                  <img src="./images/portfolio/category_gradient.png" alt="" />
+                </div>
+                <span>Комплексное управление</span>
+              </div>
+            </div>
+          </div>
+          <button class="portfolio_projects__next">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.311251 20.275C-0.0891556 20.6554 -0.105385 21.2883 0.275001 21.6887C0.655386 22.0892 1.28834 22.1054 1.68875 21.725L0.311251 20.275ZM21.9997 2.02563C22.0138 1.47353 21.5777 1.01448 21.0256 1.00033L12.0286 0.769634C11.4765 0.755477 11.0174 1.19157 11.0033 1.74367C10.9891 2.29578 11.4252 2.75482 11.9773 2.76898L19.9747 2.97404L19.7696 10.9714C19.7555 11.5235 20.1916 11.9826 20.7437 11.9967C21.2958 12.0109 21.7548 11.5748 21.769 11.0227L21.9997 2.02563ZM1.68875 21.725L21.6888 2.725L20.3113 1.275L0.311251 20.275L1.68875 21.725Z"
+                fill="#F9FBFE"
+              />
+            </svg>
+            <span class="portfolio_projects__next-text"> показать ещё </span>
+          </button>
+        </div>
+      </section>
     </section>
-
     <footer class="footer">
       <div class="container">
         <div class="footer_container">
@@ -774,7 +989,7 @@
           <nav class="navbar">
             <ul class="navbar__menu">
               <li class="navbar__menu-link"><a href="#">Услуги</a></li>
-              <li class="navbar__menu-link"><a href="#">Портфолио</a></li>
+              <li class="navbar__menu-link"><a href="./portfolio.html">Портфолио</a></li>
               <li class="navbar__menu-link"><a href="./about.html">О компании</a></li>
               <li class="navbar__menu-link"><a href="#">Новости</a></li>
               <li class="navbar__menu-link"><a href="./contacts.html">Контакты</a></li>
@@ -862,8 +1077,6 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- <script src="./js/page-home.js"></script> -->
-
-    <script src="./js/page-contacts.js"></script>
+    <script src="./js/page-portfolio.js"></script>
   </body>
 </html>
