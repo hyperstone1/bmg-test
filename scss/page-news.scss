@@ -59,51 +59,52 @@
         height: 100%;
         z-index: -1;
       }
-    }
-    &__last_news {
-      padding-right: 9.8rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.7rem;
-      &-title {
-        padding-bottom: 1.3rem;
-        font-family: 'akzidenz-grotesk';
-        font-weight: 700;
-        font-size: 1.25vw;
-        color: #ffffff;
-      }
-      &-img {
-        width: 16.458333vw;
-        height: 8.90625vw;
-      }
-      &_list {
-        width: 16.458333vw;
-        height: 8.90625vw;
-        display: inline-flex;
+      &_last_news {
+        padding-right: 9.8rem;
+        display: flex;
         flex-direction: column;
-        &-item {
+        align-items: flex-end;
+        gap: 0.7rem;
+        &-title {
+          padding-bottom: 1.3rem;
+          font-family: 'akzidenz-grotesk';
+          font-weight: 700;
+          font-size: 1.25vw;
+          color: #ffffff;
+        }
+        &-img {
+          width: 16.458333vw;
+          height: 8.90625vw;
+        }
+        &_list {
+          width: 16.458333vw;
+          height: 8.90625vw;
           display: inline-flex;
           flex-direction: column;
-          gap: 0.8rem;
-          padding: 1.3rem 0rem;
-          border-bottom: 1px solid #a1acb9;
-          &:last-child {
-            border: none;
+          &-item {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            padding: 1.3rem 0rem;
+            border-bottom: 1px solid #a1acb9;
+            &:last-child {
+              border: none;
+            }
+          }
+          &-description {
+            font-weight: 600;
+            font-size: 0.9375vw;
+            color: #222222;
+          }
+          &-chapter {
+            font-weight: 500;
+            font-size: 0.78125vw;
+            color: #d01181;
           }
         }
       }
-      &-description {
-        font-weight: 600;
-        font-size: 0.9375vw;
-        color: #222222;
-      }
-      &-chapter {
-        font-weight: 500;
-        font-size: 0.78125vw;
-        color: #d01181;
-      }
     }
+
     &__projects {
       display: flex;
       flex-direction: row;
@@ -157,6 +158,294 @@
         font-weight: 600;
         font-size: 0.9375vw;
         color: #222222;
+      }
+    }
+  }
+  &_company {
+    &-title {
+      margin-bottom: 4.9rem;
+      font-family: 'akzidenz-grotesk';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.6041666vw;
+      color: #f9fbfe;
+    }
+    &__show_more {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 7.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 7.8125vw;
+      height: 7.8125vw;
+      background-color: #d01181;
+      border-radius: 50%;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+      &-text {
+        width: 4.8958333vw;
+        margin-bottom: -2rem;
+        font-weight: 600;
+        font-size: 0.78125vw;
+        text-align: center;
+        text-transform: uppercase;
+        color: #f9fbfe;
+      }
+      &-icon {
+        width: 1.40625vw;
+        height: 1.40625vw;
+      }
+    }
+    &__filter {
+      margin-bottom: 8rem;
+      display: flex;
+      gap: 3.2rem;
+      padding: 1.6rem 2rem;
+      background: rgba(16, 16, 16, 0.1);
+      backdrop-filter: blur(0.5rem);
+      border: 1px solid rgba(118, 118, 118, 0.26);
+      &-item {
+        font-weight: 700;
+        font-size: 1.25vw;
+        line-height: 140%;
+        color: #a1acb9;
+      }
+    }
+    &_container {
+      padding: 0px 9.8rem;
+    }
+    &__news {
+      &_list {
+        display: flex;
+        gap: 5rem;
+        &-gradient {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &-item {
+          width: 43.59375vw;
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          align-items: center;
+        }
+        &_description {
+          position: relative;
+          padding: 4rem;
+          margin-top: -5rem;
+          width: 39.4270833vw;
+          background: #101010;
+          &-chapter {
+            position: relative;
+            padding: 1rem;
+            margin-bottom: 3.2rem;
+            width: fit-content;
+            font-weight: 500;
+            font-size: 0.78125vw;
+            line-height: 1.4;
+            color: #222222;
+            background-color: #f9fbfe;
+            z-index: 2;
+          }
+          &-title {
+            position: relative;
+            margin-bottom: 2.4rem;
+
+            font-weight: 600;
+            font-size: 1.5625vw;
+            line-height: 1.4;
+            color: #f9fbfe;
+            z-index: 2;
+          }
+          &-text {
+            position: relative;
+            font-weight: 500;
+            font-size: 0.9375vw;
+            line-height: 1.5;
+            color: #f9fbfe;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .news {
+    padding-top: 29.8rem;
+    &_summary {
+      margin-bottom: 18rem;
+      &__container {
+        padding: 0rem 2rem;
+        flex-direction: column;
+      }
+      &__text {
+        width: 100%;
+        &-comment {
+          width: 38.933333vw;
+          font-size: 4.2666vw;
+        }
+        &-title {
+          font-size: 7.2vw;
+        }
+        &-description {
+          font-size: 3.733vw;
+        }
+      }
+      &__info {
+        margin-top: 8rem;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        &-img {
+          position: relative;
+          margin-bottom: 8rem;
+          order: 2;
+        }
+        &_last_news {
+          padding: 0;
+          order: 1;
+          align-items: start;
+          gap: 4rem;
+          &-title {
+            font-size: 4.8vw;
+          }
+          &-img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
+          &_list {
+            width: 100%;
+            height: 100%;
+            &-item {
+              display: inline-flex;
+              padding: 2.6rem 0rem;
+              gap: 1.8rem;
+              &:last-child {
+                padding-bottom: 3rem;
+              }
+            }
+            &-description {
+              font-size: 4.2666vw;
+              color: #ffffff;
+            }
+            &-chapter {
+              font-size: 3.733vw;
+            }
+          }
+        }
+      }
+      &__projects {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        order: 3;
+        padding: 4rem;
+        &-title {
+          // font-weight: 700;
+          font-size: 6.4vw;
+          line-height: 1.4;
+          color: #d01181;
+          transform: none;
+        }
+        &-item {
+          height: 32.53333vw;
+
+          // flex-direction: column;
+        }
+        &-pagination {
+          svg {
+            width: 12vw;
+          }
+        }
+      }
+      &__project {
+        &-img {
+          width: 36.53333vw;
+          height: 100%;
+          img {
+            height: 100%;
+          }
+        }
+        &_info {
+          width: 41.6vw;
+          justify-content: space-between;
+        }
+        &-title {
+          font-size: 4.2666vw;
+        }
+        &-description {
+          font-size: 4.2666vw;
+          line-height: 1.4;
+        }
+      }
+    }
+    &_company {
+      &_container {
+        padding: 0rem 2rem;
+      }
+      &-title {
+        font-size: 7.2vw;
+        margin-bottom: 8rem;
+      }
+      &__filter {
+        padding: 3rem 4rem;
+        &-item {
+          font-size: 4.2666vw;
+        }
+      }
+      &__news {
+        &_list {
+          flex-direction: column;
+          gap: 8rem;
+          &-item {
+            width: 100%;
+          }
+          &_description {
+            width: 89.33333vw;
+            &-chapter {
+              padding: 2rem;
+              font-size: 3.733vw;
+            }
+            &-title {
+              font-size: 4.8vw;
+            }
+            &-text {
+              font-size: 3.733vw;
+            }
+          }
+        }
+      }
+      &__show_more {
+        width: 30.933vw;
+        height: 30.933vw;
+        gap: 2rem;
+        &-text {
+          margin-bottom: 0;
+          width: 16vw;
+          font-size: 2.9333vw;
+        }
+        &-icon {
+          width: 5.3333vw;
+          height: 5.3333vw;
+        }
       }
     }
   }

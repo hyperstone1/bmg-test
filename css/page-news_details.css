@@ -105,3 +105,94 @@
   line-height: 1.4;
   color: #a1acb9;
 }
+
+@media (max-width: 48em) {
+  .news_details {
+    padding-top: 28.8rem;
+  }
+  .news_details_container {
+    padding: 0rem 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .news_details__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .news_details__info-subtitle {
+    width: 38.933333vw;
+    font-weight: 600;
+    font-size: 4.266666vw;
+  }
+  .news_details__info-title {
+    width: 100%;
+    font-size: 7.2vw;
+    color: #ffffff;
+  }
+  .news_details__info-img {
+    width: 100%;
+    height: 81.6vw;
+    margin-bottom: 5.6rem;
+  }
+  .news_details__info-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .news_details__info-chapter {
+    font-weight: 500;
+    font-size: 4.26666vw;
+    color: #d01181;
+    margin-bottom: 2.4rem;
+  }
+  .news_details__info-text {
+    font-weight: 500;
+    font-size: 4.266666vw;
+    line-height: 1.5;
+    color: #f9fbfe;
+  }
+  .news_details__other_news {
+    width: 100%;
+    margin-top: 18rem;
+  }
+  .news_details__other_news-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6.4rem;
+  }
+  .news_details__other_news-item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.4rem;
+    padding-bottom: 6.4rem;
+  }
+  .news_details__other_news-item:last-child {
+    border-bottom: none;
+  }
+  .news_details__other_news-chapter {
+    font-size: 3.73333333vw;
+  }
+  .news_details__other_news-title {
+    font-size: 4.8vw;
+  }
+  .news_details__other_news-text {
+    font-size: 3.73333333vw;
+  }
+}
