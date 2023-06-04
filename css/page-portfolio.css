@@ -32,10 +32,13 @@
 .portfolio_main__img-left img {
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transition: -webkit-transform 0.9s;
+  transition: -webkit-transform 0.9s;
+  transition: transform 0.9s;
+  transition: transform 0.9s, -webkit-transform 0.9s;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  will-change: transform;
 }
 .portfolio_main__img-right {
   position: relative;
@@ -44,10 +47,13 @@
   overflow: hidden;
 }
 .portfolio_main__img-right img {
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.9s;
+  transition: -webkit-transform 0.9s;
+  transition: transform 0.9s;
+  transition: transform 0.9s, -webkit-transform 0.9s;
 }
 .portfolio_main__img-right:hover img, .portfolio_main__img-left:hover img {
   -webkit-transform: scale(1.2);
