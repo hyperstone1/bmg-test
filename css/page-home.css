@@ -17,18 +17,6 @@
   padding-top: 13.5rem;
   margin-bottom: 0;
 }
-.benefits .gradient_blur {
-  position: absolute;
-  width: 100%;
-  top: 15.2rem;
-  height: 196.1rem;
-  z-index: -1;
-}
-.benefits .gradient_blur img {
-  width: 100%;
-  height: 100%;
-}
-
 .benefits_container {
   padding-bottom: 20rem;
   display: -webkit-box;
@@ -76,7 +64,7 @@
   position: relative;
   width: 74.3229166vw;
 }
-.benefits_container .complex .complex_signature {
+.benefits_container .complex_signature {
   left: -44rem;
   position: absolute;
   bottom: 39.9rem;
@@ -88,7 +76,7 @@
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-.benefits_container .complex .complex__container {
+.benefits_container .complex__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,16 +94,16 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-.benefits_container .complex .complex__container .complex__subscription {
+.benefits_container .complex__container .complex__subscription {
   width: 36.04166vw;
 }
-.benefits_container .complex .complex__container .complex__subscription .complex__subscription-subtitle {
+.benefits_container .complex__container .complex__subscription-subtitle {
   font-weight: 600;
   font-size: 0.9375vw;
   color: #d01181;
   margin-bottom: 3.2rem;
 }
-.benefits_container .complex .complex__container .complex__subscription .complex__subscription-title {
+.benefits_container .complex__container .complex__subscription-title {
   font-weight: 700;
   font-family: "akzidenz-grotesk";
   font-size: 2.60416vw;
@@ -123,7 +111,7 @@
   color: #222222;
   margin-bottom: 7.5rem;
 }
-.benefits_container .complex .complex__container .complex__subscription .complex__subscription-btn {
+.benefits_container .complex__container .complex__subscription-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -135,7 +123,7 @@
   text-transform: uppercase;
   color: #f9fbfe;
 }
-.benefits_container .complex .complex__container .complex__subscription .complex__subscription-btn .complex-btn {
+.benefits_container .complex__container .complex__subscription-btn .complex-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,26 +144,26 @@
   border-radius: 50%;
   background: #d01181;
 }
-.benefits_container .complex .complex_img {
+.benefits_container .complex_img {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
-.benefits_container .complex .complex_img img {
+.benefits_container .complex_img img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.benefits_container .complex .complex__advantages {
+.benefits_container .complex__advantages {
   position: relative;
   width: 100%;
   padding-bottom: 6rem;
   padding-left: 20rem;
   overflow: hidden;
 }
-.benefits_container .complex .complex__advantages .complex__advantages__list {
+.benefits_container .complex__advantages__list {
   width: 54vw;
   margin: 0 auto;
   display: -webkit-box;
@@ -189,16 +177,16 @@
           justify-content: center;
   gap: 0.6rem;
 }
-.benefits_container .complex .complex__advantages .complex__advantages__list .complex__advantages__list__wrapper {
+.benefits_container .complex__advantages__list__wrapper {
   gap: 0.6rem;
 }
-.benefits_container .complex .complex__advantages .complex__advantages__list .swiper-slide {
+.benefits_container .complex__advantages__list .swiper-slide {
   width: auto;
   height: auto;
   -ms-flex-negative: 1;
       flex-shrink: 1;
 }
-.benefits_container .complex .complex__advantages .complex__advantages__list .advantages__list__item {
+.benefits_container .complex__advantages__list .advantages__list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,17 +203,29 @@
   border-radius: 2px;
   text-align: left;
 }
-.benefits_container .complex .complex__advantages .complex__advantages__list .advantages__list__item .item-title {
+.benefits_container .complex__advantages__list .advantages__list__item .item-title {
   font-family: "akzidenz-grotesk";
   font-weight: 700;
   font-size: 1.25vw;
   color: #222222;
 }
-.benefits_container .complex .complex__advantages .complex__advantages__list .advantages__list__item .item-subscription {
+.benefits_container .complex__advantages__list .advantages__list__item .item-subscription {
   font-weight: 500;
   font-size: 0.78125vw;
   line-height: 140%;
   color: #a1acb9;
+}
+
+.gradient_blur {
+  position: absolute;
+  width: 100%;
+  top: 15.2rem;
+  height: 196.1rem;
+  z-index: -1;
+}
+.gradient_blur img {
+  width: 100%;
+  height: 100%;
 }
 
 .services {
@@ -234,7 +234,7 @@
           animation: thumbAnim 2s ease;
   overflow: hidden;
 }
-.services .services__title {
+.services__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,18 +243,18 @@
           justify-content: space-between;
   padding-bottom: 9rem;
 }
-.services .services__title .services__title_container {
+.services__title_container {
   position: relative;
   width: 39.53125vw;
 }
-.services .services__title .services__title_container .services__title-title {
+.services__title_container .services__title-title {
   font-family: "akzidenz-grotesk";
   font-weight: 700;
   font-size: 2.604166vw;
   line-height: 130%;
   color: #f9fbfe;
 }
-.services .services__title .services__title_container .services__title-subtitle {
+.services__title_container .services__title-subtitle {
   position: absolute;
   top: 9rem;
   left: 26rem;
@@ -264,7 +264,7 @@
   line-height: 150%;
   color: #f9fbfe;
 }
-.services .services__title .services__show_more {
+.services__title .services__show_more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,7 +273,7 @@
           align-items: center;
   gap: 2.1rem;
 }
-.services .services__title .services__show_more .show_more-all {
+.services__title .services__show_more .show_more-all {
   font-weight: 600;
   font-size: 0.78125vw;
   line-height: 19px;
@@ -281,7 +281,7 @@
   text-transform: uppercase;
   color: #ffffff;
 }
-.services .services__title .services__show_more .btn-show {
+.services__title .services__show_more .btn-show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,7 +312,7 @@
           flex-direction: row;
   gap: 5rem;
 }
-.services .services_list .services_list-service {
+.services .services_list-service {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,13 +325,13 @@
   width: 20.52083vw;
   height: 100%;
 }
-.services .services_list .services_list-service .service_img {
+.services .services_list-service .service_img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   cursor: pointer;
 }
-.services .services_list .services_list-service .service_img img {
+.services .services_list-service .service_img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -339,20 +339,20 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.services .services_list .services_list-service .service__title {
+.services .services_list-service .service__title {
   font-weight: 600;
   font-size: 1.5625vw;
   line-height: 140%;
   color: #ffffff;
 }
-.services .services_list .services_list-service:hover .service_img img {
+.services .services_list-service:hover .service_img img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-.services .services_list .services_list-service:hover .services__more {
+.services .services_list-service:hover .services__more {
   opacity: 1;
 }
-.services .services_list .services_list-service .services__more {
+.services .services_list-service .services__more {
   position: absolute;
   top: 13rem;
   left: 28rem;
@@ -364,7 +364,7 @@
   transition: all 0.3s;
   opacity: 0;
 }
-.services .services_list .services_list-service .services__more .btn-services {
+.services .services_list-service .services__more .btn-services {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -385,17 +385,17 @@
   border-radius: 50%;
   color: #f9fbfe;
 }
-.services .services_list .services_list-service .services__more .btn-services svg {
+.services .services_list-service .services__more .btn-services svg {
   width: 1.43697916vw;
 }
-.services .services_list .services_list-service .services__more .btn-services .btn-services_more {
+.services .services_list-service .services__more .btn-services .btn-services_more {
   font-weight: 600;
   font-size: 0.78125vw;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
-.projects .projects__title {
+.projects__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,14 +404,14 @@
           justify-content: space-between;
   padding-bottom: 8.2rem;
 }
-.projects .projects__title .projects__title-title {
+.projects__title-title {
   font-family: "akzidenz-grotesk";
   font-weight: 700;
   font-size: 2.604166vw;
   line-height: 130%;
   color: #f9fbfe;
 }
-.projects .projects__title .projects__title__show_more {
+.projects__title__show_more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,7 +420,7 @@
           align-items: center;
   gap: 2.1rem;
 }
-.projects .projects__title .projects__title__show_more .show_more-all {
+.projects__title__show_more .show_more-all {
   font-weight: 600;
   font-size: 0.78125vw;
   line-height: 19px;
@@ -428,7 +428,7 @@
   text-transform: uppercase;
   color: #ffffff;
 }
-.projects .projects__title .projects__title__show_more .btn-show {
+.projects__title__show_more .btn-show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -599,13 +599,13 @@
     z-index: -1;
     left: -38.4rem;
   }
-  .benefits .benefits_container .aim {
+  .benefits_container .aim {
     display: none;
   }
-  .benefits .benefits_container .complex {
+  .benefits_container .complex {
     width: 100%;
   }
-  .benefits .benefits_container .complex .complex_signature {
+  .benefits_container .complex_signature {
     bottom: auto;
     top: -6rem;
     font-size: 50px;
@@ -616,20 +616,20 @@
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  .benefits .benefits_container .complex .complex__container {
+  .benefits_container .complex__container {
     padding: 6.3rem 2rem 8rem 2rem;
   }
-  .benefits .benefits_container .complex .complex__container .complex__subscription {
+  .benefits_container .complex__container .complex__subscription {
     width: 100%;
   }
-  .benefits .benefits_container .complex .complex__container .complex__subscription .complex__subscription-subtitle {
+  .benefits_container .complex__container .complex__subscription .complex__subscription-subtitle {
     margin-bottom: 1.2rem;
     font-weight: 600;
     font-size: 18px;
     line-height: 23px;
     color: #d01181;
   }
-  .benefits .benefits_container .complex .complex__container .complex__subscription .complex__subscription-title {
+  .benefits_container .complex__container .complex__subscription .complex__subscription-title {
     font-family: "akzidenz-grotesk";
     font-style: normal;
     font-weight: 700;
@@ -637,7 +637,7 @@
     line-height: 125%;
     color: #222222;
   }
-  .benefits .benefits_container .complex .complex__container .complex__subscription .complex__subscription-btn {
+  .benefits_container .complex__container .complex__subscription .complex__subscription-btn {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -652,63 +652,63 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .benefits .benefits_container .complex .complex__container .complex__subscription .complex__subscription-btn .btn-detailed {
+  .benefits_container .complex__container .complex__subscription .complex__subscription-btn .btn-detailed {
     width: 30.9333vw;
     height: 30.9333vw;
     gap: 2rem;
   }
-  .benefits .benefits_container .complex .complex__container .complex__subscription .complex__subscription-btn .complex-btn-text {
+  .benefits_container .complex__container .complex__subscription .complex__subscription-btn .complex-btn-text {
     font-size: 2.933333vw;
   }
-  .benefits .benefits_container .complex .complex__container .complex__subscription .complex__subscription-btn svg {
+  .benefits_container .complex__container .complex__subscription .complex__subscription-btn svg {
     width: 5.33333vw;
   }
-  .benefits .benefits_container .complex .complex__logo {
+  .benefits_container .complex__logo {
     display: none;
   }
-  .benefits .benefits_container .complex .complex__advantages {
+  .benefits_container .complex__advantages {
     padding-left: 2rem;
   }
-  .benefits .benefits_container .complex .complex__advantages .complex__advantages__list {
+  .benefits_container .complex__advantages__list {
     width: 100%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .benefits .benefits_container .complex .complex__advantages .complex__advantages__list .complex__advantages__list__wrapper {
+  .benefits_container .complex__advantages__list__wrapper {
     gap: 0;
   }
-  .benefits .benefits_container .complex .complex__advantages .complex__advantages__list .advantages__list__item {
+  .benefits_container .complex__advantages__list .advantages__list__item {
     padding: 3rem 6rem 8rem 4rem;
   }
-  .benefits .benefits_container .complex .complex__advantages .complex__advantages__list .advantages__list__item .item-title {
+  .benefits_container .complex__advantages__list .advantages__list__item .item-title {
     font-size: 4.8vw;
   }
-  .benefits .benefits_container .complex .complex__advantages .complex__advantages__list .advantages__list__item .item-subscription {
+  .benefits_container .complex__advantages__list .advantages__list__item .item-subscription {
     font-size: 3.73333vw;
   }
   .services {
     padding-top: 2.5rem;
   }
-  .services .services__title {
+  .services__title {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 6.5rem;
   }
-  .services .services__title .services__show_more .show_more-all {
+  .services__title .services__show_more .show_more-all {
     font-size: 2.93333vw;
   }
-  .services .services__title .services__show_more .btn-show {
+  .services__title .services__show_more .btn-show {
     padding: 0rem;
     width: 14.4vw;
     height: 14.4vw;
   }
-  .services .services__title .services__show_more .btn-show svg {
+  .services__title .services__show_more .btn-show svg {
     width: 4.266vw;
   }
-  .services .services__title .services__title_container {
+  .services__title_container {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -719,10 +719,10 @@
     gap: 2.4rem;
     width: 100%;
   }
-  .services .services__title .services__title_container .services__title-title {
+  .services__title_container .services__title-title {
     font-size: 7.2vw;
   }
-  .services .services__title .services__title_container .services__title-subtitle {
+  .services__title_container .services__title-subtitle {
     position: relative;
     top: auto;
     left: auto;
@@ -731,50 +731,51 @@
   .services .services_list {
     gap: 2rem;
   }
-  .services .services_list .services_list-service {
+  .services .services_list-service {
     width: 73.86666vw;
   }
-  .services .services_list .services_list-service .service_img {
+  .services .services_list-service .service_img {
     width: inherit;
   }
-  .services .services_list .services_list-service .service__title {
+  .services .services_list-service .service__title {
     font-size: 4.8vw;
   }
-  .services .services_list .services_list-service .services__more {
+  .services .services_list-service .services__more {
     top: 20rem;
     left: 48rem;
   }
-  .services .services_list .services_list-service .services__more .btn-detailed {
+  .services .services_list-service .services__more .btn-detailed {
     gap: 0.5rem;
     width: 14.4vw;
     height: 14.4vw;
   }
-  .services .services_list .services_list-service .services__more .btn-detailed svg {
+  .services .services_list-service .services__more .btn-detailed svg {
     width: 3.2666vw;
     height: 3.2666vw;
   }
-  .services .services_list .services_list-service .services__more .btn-detailed .btn-services_more {
+  .services .services_list-service .services__more .btn-detailed .btn-services_more {
     font-size: 1.78125vw;
   }
-  .projects .projects__title {
+  .projects__title {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 5rem;
+    padding-bottom: 8.2rem;
   }
-  .projects .projects__title .projects__title-title {
+  .projects__title-title {
     font-size: 7.2vw;
   }
-  .projects .projects__title .projects__title__show_more .show_more-all {
+  .projects__title__show_more .show_more-all {
     font-size: 2.9333333vw;
   }
-  .projects .projects__title .projects__title__show_more .btn-show {
+  .projects__title__show_more .btn-show {
     padding: 0rem;
     width: 14.4vw;
     height: 14.4vw;
   }
-  .projects .projects__title .projects__title__show_more .btn-show svg {
+  .projects__title__show_more .btn-show svg {
     width: 4.266vw;
   }
   .projects .projects_slider .swiper-thumbs {
