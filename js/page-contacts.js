@@ -7,9 +7,6 @@ ymaps.ready(function () {
       hideFooter: true,
       behaviors: ['default'],
     }),
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div class="placemark" style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>',
-    ),
     myPlacemarkWithContent = new ymaps.Placemark(
       [55.840245, 37.492024],
       {
@@ -31,7 +28,6 @@ ymaps.ready(function () {
         // Смещение слоя с содержимым относительно слоя с картинкой.
         // iconContentOffset: [15, 15],
         // Макет содержимого.
-        iconContentLayout: MyIconContentLayout,
       },
     );
   //   myMap.container.fitToViewport();

@@ -315,28 +315,6 @@
   z-index: -1;
 }
 
-.btn-about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 3.6979166vw;
-  height: 3.6979166vw;
-  background: #ffffff;
-  -webkit-box-shadow: 8px 5px 60px rgba(205, 66, 83, 0.3);
-          box-shadow: 8px 5px 60px rgba(205, 66, 83, 0.3);
-  border-radius: 1000px;
-}
-.btn-about svg {
-  width: 1.145833vw;
-  height: 1.145833vw;
-}
-
 @media (max-width: 48em) {
   .about {
     padding-top: 23rem;
