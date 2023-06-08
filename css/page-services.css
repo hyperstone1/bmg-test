@@ -4,6 +4,51 @@
   padding-top: 20.3rem;
   overflow: hidden;
 }
+.services .swiper-slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  -webkit-transform-style: preserve-3d !important;
+          transform-style: preserve-3d !important;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.services .swiper-slide-active img {
+  height: 90% !important;
+}
+.services .swiper-slide-active {
+  overflow: hidden;
+}
+.services .swiper-slide-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  border-radius: 50%;
+}
+.services .swiper-slide-prev img {
+  -webkit-transform: perspective(1000px) rotateY(20deg) !important;
+          transform: perspective(1000px) rotateY(20deg) !important;
+}
+.services .swiper-slide-next img {
+  -webkit-transform: perspective(1000px) rotateY(-20deg) !important;
+          transform: perspective(1000px) rotateY(-20deg) !important;
+}
+.services .swiper-slide-prev img,
+.services .swiper-slide-next img {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
 .services-gradient {
   top: 0;
   position: absolute;
@@ -15,10 +60,23 @@
   height: 100%;
 }
 .services_summary {
-  margin-bottom: 46rem;
+  margin-bottom: 21rem;
 }
 .services_summary__container {
-  padding-left: 9.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services_summary__text {
+  width: 100%;
+  padding: 0 9.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,19 +87,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.services_summary__text {
-  width: 24.4270833vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 3.6rem;
   color: #fff;
 }
@@ -54,18 +99,21 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .services_summary__text-title {
+  width: 32.427083vw;
   font-family: "akzidenz-grotesk";
   font-weight: 700;
   font-size: 2.6041666vw;
   color: #ffffff;
 }
 .services_summary__text-description {
-  font-weight: 500;
-  font-size: 0.9375vw;
-  color: #ffffff;
+  width: 65rem;
+  font-weight: 600;
+  font-size: 1.5625vw;
+  line-height: 1.4;
+  color: #f9fbfe;
 }
 .services_summary__info {
-  position: absolute;
+  position: relative;
   right: 0;
   top: 0;
   display: -webkit-box;
@@ -75,11 +123,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 55.9895833vw;
-  height: 51.041666vw;
+  width: 100%;
 }
 .services_summary__info-img {
   position: relative;
@@ -91,6 +135,19 @@
   width: 100%;
   height: 100%;
 }
+.services_summary__info .slider-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.7rem;
+}
 .services_summary__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,7 +156,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 2.1rem;
-  padding-top: 2.6rem;
+  padding-top: 4rem;
 }
 .services_summary__btn-text {
   font-weight: 600;

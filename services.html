@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/page-services.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="./js/header.js"></script>
 
     <title>Услуги</title>
@@ -427,33 +428,84 @@
       <section class="services_summary">
         <div class="services_summary__container">
           <div class="services_summary__text">
-            <div class="services_summary__text-title">
-              Отлаженный механизм взаимодействия служб и подразделений
-            </div>
+            <div class="services_summary__text-title">Предоставляемые услуги</div>
             <div class="services_summary__text-description">
-              Экспертно оцениваем арендные ставки, помогаем определить оптимальные платежи
+              Отлаженный механизм взаимодействия служб и подразделений
+              <div class="services_summary__btn">
+                <span class="services_summary__btn-text">Оставить заявку</span>
+                <button class="btn-about">
+                  <svg
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292893 16.3233C-0.0976311 16.7138 -0.0976311 17.347 0.292893 17.7375C0.683418 18.128 1.31658 18.128 1.70711 17.7375L0.292893 16.3233ZM18 1.0304C18 0.478111 17.5523 0.0303958 17 0.0303955L8 0.0303963C7.44771 0.030396 7 0.478112 7 1.0304C7 1.58268 7.44772 2.0304 8 2.0304L16 2.0304L16 10.0304C16 10.5827 16.4477 11.0304 17 11.0304C17.5523 11.0304 18 10.5827 18 10.0304L18 1.0304ZM1.70711 17.7375L17.7071 1.7375L16.2929 0.323289L0.292893 16.3233L1.70711 17.7375Z"
+                      fill="#D01181"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div class="services_summary__btn">
-              <span class="services_summary__btn-text">Оставить заявку</span>
-              <button class="btn-about">
+          </div>
+          <div class="services_summary__info">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/services/services_slide_1.webp" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/services/services_slide_2.webp" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/services/services_slide_3.webp" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/services/services_slide_1.webp" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/services/services_slide_2.webp" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/services/services_slide_3.webp" alt="" />
+                </div>
+                <!-- <div class="services_summary__info-img">
+    
+                </div> -->
+                <!-- Добавьте дополнительные слайды по необходимости -->
+              </div>
+            </div>
+            <div class="slider-navigation">
+              <div class="slider-prev">
                 <svg
-                  width="18"
-                  height="19"
-                  viewBox="0 0 18 19"
+                  width="49"
+                  height="23"
+                  viewBox="0 0 49 23"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M0.292893 16.3233C-0.0976311 16.7138 -0.0976311 17.347 0.292893 17.7375C0.683418 18.128 1.31658 18.128 1.70711 17.7375L0.292893 16.3233ZM18 1.0304C18 0.478111 17.5523 0.0303958 17 0.0303955L8 0.0303963C7.44771 0.030396 7 0.478112 7 1.0304C7 1.58268 7.44772 2.0304 8 2.0304L16 2.0304L16 10.0304C16 10.5827 16.4477 11.0304 17 11.0304C17.5523 11.0304 18 10.5827 18 10.0304L18 1.0304ZM1.70711 17.7375L17.7071 1.7375L16.2929 0.323289L0.292893 16.3233L1.70711 17.7375Z"
-                    fill="#D01181"
-                  ></path>
+                    d="M47 12.748C47.8284 12.748 48.5 12.0765 48.5 11.248C48.5 10.4196 47.8284 9.74805 47 9.74805L47 12.748ZM0.939339 10.1874C0.353554 10.7732 0.353554 11.7229 0.939338 12.3087L10.4853 21.8546C11.0711 22.4404 12.0208 22.4404 12.6066 21.8546C13.1924 21.2689 13.1924 20.3191 12.6066 19.7333L4.12132 11.248L12.6066 2.76276C13.1924 2.17697 13.1924 1.22723 12.6066 0.641439C12.0208 0.0556522 11.0711 0.0556521 10.4853 0.641439L0.939339 10.1874ZM47 9.74805L2 9.74804L2 12.748L47 12.748L47 9.74805Z"
+                    fill="#F9FBFE"
+                  />
                 </svg>
-              </button>
-            </div>
-          </div>
-          <div class="services_summary__info">
-            <div class="services_summary__info-img">
-              <img src="./images/services/services_back.png" alt="" />
+              </div>
+              <div class="slider-next">
+                <svg
+                  width="49"
+                  height="23"
+                  viewBox="0 0 49 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 9.74805C1.17157 9.74805 0.5 10.4196 0.5 11.248C0.5 12.0765 1.17157 12.748 2 12.748L2 9.74805ZM48.0607 12.3087C48.6464 11.7229 48.6464 10.7732 48.0607 10.1874L38.5147 0.641448C37.9289 0.0556615 36.9792 0.0556614 36.3934 0.641448C35.8076 1.22723 35.8076 2.17698 36.3934 2.76277L44.8787 11.2481L36.3934 19.7333C35.8076 20.3191 35.8076 21.2689 36.3934 21.8547C36.9792 22.4404 37.9289 22.4404 38.5147 21.8547L48.0607 12.3087ZM2 12.748L47 12.7481L47 9.74805L2 9.74805L2 12.748Z"
+                    fill="#F9FBFE"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -1307,6 +1359,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- <script src="./js/page-home.js"></script> -->
 
-    <script src="./js/page-contacts.js"></script>
+    <script src="./js/page-services.js"></script>
   </body>
 </html>

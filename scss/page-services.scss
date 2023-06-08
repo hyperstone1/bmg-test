@@ -2,6 +2,43 @@
   position: relative;
   padding-top: 20.3rem;
   overflow: hidden;
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    transform-style: preserve-3d !important;
+    transition: all 0.4s;
+  }
+  .swiper-slide-active img {
+    height: 90% !important;
+  }
+  .swiper-slide-active {
+    overflow: hidden;
+  }
+  .swiper-slide-active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  .swiper-slide-prev img {
+    transform: perspective(1000px) rotateY(20deg) !important;
+  }
+
+  .swiper-slide-next img {
+    transform: perspective(1000px) rotateY(-20deg) !important;
+  }
+  .swiper-slide-prev img,
+  .swiper-slide-next img {
+    transition: all 0.4s;
+  }
+
   &-gradient {
     top: 0;
     position: absolute;
@@ -13,19 +50,19 @@
     }
   }
   &_summary {
-    margin-bottom: 46rem;
+    margin-bottom: 21rem;
 
     &__container {
-      padding-left: 9.8rem;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
     }
     &__text {
-      width: 24.4270833vw;
+      width: 100%;
+      padding: 0 9.8rem;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
+      justify-content: space-between;
       gap: 3.6rem;
       color: #fff;
       &-comment {
@@ -37,26 +74,28 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       }
       &-title {
+        width: 32.427083vw;
         font-family: 'akzidenz-grotesk';
         font-weight: 700;
         font-size: 2.6041666vw;
         color: #ffffff;
       }
       &-description {
-        font-weight: 500;
-        font-size: 0.9375vw;
-        color: #ffffff;
+        width: 65rem;
+        font-weight: 600;
+        font-size: 1.5625vw;
+        line-height: 1.4;
+        color: #f9fbfe;
       }
     }
     &__info {
-      position: absolute;
+      position: relative;
       right: 0;
       top: 0;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      width: 55.9895833vw;
-      height: 51.041666vw;
+      width: 100%;
+
       &-img {
         position: relative;
         width: 100%;
@@ -67,12 +106,20 @@
           height: 100%;
         }
       }
+      .slider-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.7rem;
+        .slider-next {
+        }
+      }
     }
     &__btn {
       display: flex;
       align-items: center;
       gap: 2.1rem;
-      padding-top: 2.6rem;
+      padding-top: 4rem;
       &-text {
         font-weight: 600;
         font-size: 0.78125vw;
