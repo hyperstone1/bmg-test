@@ -54,7 +54,7 @@
   position: absolute;
   width: 101.5625vw;
   z-index: -1;
-  height: 83.333333vw;
+  height: 99.333333vw;
 }
 .services-gradient img {
   height: 100%;
@@ -73,6 +73,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 6.7rem;
 }
 .services_summary__text {
   width: 100%;
@@ -124,6 +125,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  gap: 2rem;
 }
 .services_summary__info-img {
   position: relative;
@@ -503,4 +505,70 @@
   height: 100%;
   opacity: 1;
   z-index: 1;
+}
+
+.slider-prev {
+  position: relative;
+}
+.slider-prev:hover .arrow_fill-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-prev:hover .arrow_fill-prev svg path {
+  stroke: #d01181;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+
+.slider-next {
+  position: relative;
+}
+.slider-next:hover .arrow_fill-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slider-next:hover .arrow_fill-next svg path {
+  stroke: #d01181;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+
+.arrow_fill-prev {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.arrow_fill-prev svg path {
+  width: 100%;
+  height: 100%;
+  fill: #d01181;
+  -webkit-transition: -webkit-clip-path 0.5s ease;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+  -webkit-clip-path: inset(0 0 0 100%);
+          clip-path: inset(0 0 0 100%);
+}
+
+.arrow_fill-next {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.arrow_fill-next svg path {
+  width: 100%;
+  height: 100%;
+  fill: #d01181;
+  -webkit-transition: -webkit-clip-path 0.5s ease;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
 }
