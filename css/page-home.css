@@ -624,11 +624,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 158%;
-  height: 116%;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  -webkit-transform: rotate(31deg) translate(-64px, 22px);
-          transform: rotate(31deg) translate(-64px, 22px);
 }
 .news__list_bottom-gradient img {
   width: 157%;
@@ -1001,6 +999,17 @@
             align-items: flex-start;
     text-align: left;
     gap: 2.2rem;
+  }
+  .news__list_bottom-gradient {
+    width: 158%;
+    height: 116%;
+    z-index: -1;
+    -webkit-transform: rotate(31deg) translate(-64px, 22px);
+            transform: rotate(31deg) translate(-64px, 22px);
+  }
+  .news__list_bottom-gradient img {
+    width: 157%;
+    height: 104%;
   }
   .news__list_bottom-chapter {
     text-transform: lowercase;
