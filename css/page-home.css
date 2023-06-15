@@ -15,7 +15,6 @@
 }
 .benefits {
   padding-top: 13.5rem;
-  margin-bottom: 0;
 }
 .benefits_container {
   padding-bottom: 20rem;
@@ -138,7 +137,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  padding: 4.8rem 2.8rem;
   width: 7.8125vw;
   height: 7.8125vw;
   border-radius: 50%;
@@ -389,6 +387,8 @@
   width: 1.43697916vw;
 }
 .services .services_list-service .services__more .btn-services .btn-services_more {
+  z-index: 2;
+  color: #d01181;
   font-weight: 600;
   font-size: 0.78125vw;
   line-height: 1.2;
@@ -440,7 +440,6 @@
           align-items: center;
   width: 3.697916666vw;
   height: 3.697916666vw;
-  padding: 2.8rem;
   border-radius: 50%;
   background-color: #ffffff;
   -webkit-transition: all 0.3s;
@@ -500,27 +499,140 @@
   color: #101010;
 }
 
-.btn-detailed {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.news {
+  margin-bottom: 0;
+  overflow: hidden;
 }
-.btn-detailed:hover {
-  background-color: #ffffff !important;
-  color: #d01181 !important;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.news_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7.8rem;
 }
-.btn-detailed:hover svg path {
-  fill: #d01181;
+.news__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-
-.btn-show:hover {
-  background-color: #d01181 !important;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.news__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.5rem;
 }
-.btn-show:hover svg path {
-  fill: #fff;
+.news__navigation-prev {
+  cursor: pointer;
+}
+.news__navigation-next {
+  cursor: pointer;
+}
+.news__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.news__list-item {
+  position: relative;
+  width: 54.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+.news__list-item_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 28rem;
+  padding: 4.5rem 3.7rem;
+}
+.news__list-img {
+  position: relative;
+  width: 100%;
+  height: 24rem;
+}
+.news__list-img img {
+  height: 100%;
+}
+.news__list-title {
+  width: 22.802083vw;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.4;
+  color: #ffffff;
+  text-align: left;
+}
+.news__list-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 14.6rem;
+  height: 4.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: none;
+  border-right: none;
+}
+.news__list-title p {
+  text-align: left;
+  padding: 0.6rem 3.7rem;
+}
+.news__list_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.news__list_bottom-chapter {
+  width: 8.6rem;
+  font-family: "akzidenz-grotesk";
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+.news__list_bottom-text {
+  width: 27.2rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #ffffff;
+}
+.news__list_bottom-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 158%;
+  height: 116%;
+  z-index: -1;
+  -webkit-transform: rotate(31deg) translate(-64px, 22px);
+          transform: rotate(31deg) translate(-64px, 22px);
+}
+.news__list_bottom-gradient img {
+  width: 157%;
+  height: 104%;
 }
 
 .swiper-container {
@@ -827,5 +939,77 @@
   .projects .projects_slider .swiper-container .swiper-slider .slide_item .slide_item__description {
     padding: 2rem 0rem 4rem 0rem;
     font-size: 4.2666vw;
+  }
+  .btn-detailed::before {
+    -webkit-box-shadow: inset 0 0 0 12rem #ffffff;
+            box-shadow: inset 0 0 0 12rem #ffffff;
+  }
+  .news_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 7.8rem;
+  }
+  .news__title {
+    font-size: 5.4rem;
+    line-height: 1.2;
+  }
+  .news__navigation {
+    display: none;
+  }
+  .news__list-item {
+    position: relative;
+    width: 54.2rem;
+    height: 83.8rem;
+  }
+  .news__list-item_container {
+    height: 43.2rem;
+    padding: 2rem 2rem 4.6rem 2rem;
+  }
+  .news__list-img {
+    width: 100%;
+    height: 40.4rem;
+  }
+  .news__list-img img {
+    height: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%, 0 73%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%, 0 73%);
+  }
+  .news__list-title {
+    width: 51.2vw;
+    font-size: 3.6rem;
+    font-family: "akzidenz-grotesk";
+    font-weight: 500;
+  }
+  .news__list-title::after {
+    bottom: 25.7rem;
+  }
+  .news__list_bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    gap: 2.2rem;
+  }
+  .news__list_bottom-chapter {
+    text-transform: lowercase;
+    width: 10rem;
+    font-size: 3.2rem;
+  }
+  .news__list_bottom-text {
+    width: 40.8rem;
+    font-size: 2.8rem;
+    line-height: 1.35;
   }
 }

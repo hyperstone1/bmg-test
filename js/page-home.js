@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const slider = document.querySelector('.swiper-slider');
     const navigationArrowNext = document.querySelector('.swiper-slider .swiper-button-next');
     const navigationArrowPrev = document.querySelector('.swiper-slider .swiper-button-prev');
+
+    const sliderNews = new Swiper('.news__list', {
+      freeMode: true,
+      slidesPerView: 'auto',
+      spaceBetween: width > 768 ? 50 : 10,
+      navigation: {
+        nextEl: '.news__navigation-next',
+        prevEl: '.news__navigation-prev',
+      },
+    });
     if (galleryTop) {
       galleryTop.destroy();
     }
@@ -167,17 +177,47 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       //Добавляем слайдер
+      // galleryTop = new Swiper('.swiper-slider', {
+      //   spaceBetween: 10,
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+      //   clickable: false,
+      //   thumbs: {
+      //     swiper: galleryThumbs,
+      //     clickable: false,
+      //   },
+      // });
+
+      //новое
       galleryTop = new Swiper('.swiper-slider', {
+        slidesPerView: 1,
         spaceBetween: 10,
+        effect: 'fade', // Используем эффект fade для плавного появления слайдов
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        clickable: false,
+
         thumbs: {
           swiper: galleryThumbs,
-          clickable: false,
         },
+      });
+      galleryTop.on('slideChange', function () {
+        var activeIndex = galleryTop.realIndex;
+
+        var thumbsSlides = galleryThumbs.slides;
+        var lastThumbIndex = thumbsSlides.length - 1;
+
+        // Перемещаем предыдущий слайд из основного слайдера в thumbs-slider
+        galleryThumbs.prependSlide([thumbsSlides[activeIndex].outerHTML]);
+
+        // Удаляем последний слайд из thumbs-slider
+        galleryThumbs.removeSlide(lastThumbIndex + 1);
+
+        // Переключаем активный слайд в thumbs-slider
+        galleryThumbs.slideTo(lastThumbIndex);
       });
     }
   }

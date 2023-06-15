@@ -23,6 +23,14 @@
   font-weight: 700;
   src: url("../fonts/Euclid Circular A Bold.ttf") format("ttf");
 }
+.title {
+  font-family: "akzidenz-grotesk";
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1.3;
+  color: #f9fbfe;
+}
+
 .contacts_form {
   position: relative;
   padding-top: 20.2rem;
@@ -200,12 +208,84 @@
           box-shadow: inset 0 0 0 1px #d01181;
 }
 
-.email-contacts_form {
+.btn-detailed {
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-detailed .complex-btn-text {
+  z-index: 2;
+  color: #d01181;
+}
+.btn-detailed svg {
+  z-index: 2;
+}
+.btn-detailed svg path {
+  fill: #d01181;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+.btn-detailed::before, .btn-detailed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  z-index: 1;
+}
+.btn-detailed::after {
+  -webkit-box-shadow: inset 0 0 0 1px #ffffff;
+          box-shadow: inset 0 0 0 1px #ffffff;
+}
+.btn-detailed::before {
+  background: #d01181;
+  -webkit-box-shadow: inset 0 0 0 8rem #ffffff;
+          box-shadow: inset 0 0 0 8rem #ffffff;
+}
+.btn-detailed:hover svg path {
+  fill: #fff;
+}
+.btn-detailed:hover::before {
+  -webkit-box-shadow: inset 0 0 0 1px #ffffff;
+          box-shadow: inset 0 0 0 1px #ffffff;
+}
+.btn-detailed:hover::after {
+  -webkit-box-shadow: inset 0 0 0 1px #d01181;
+          box-shadow: inset 0 0 0 1px #d01181;
+}
+.btn-detailed:hover span {
+  color: #fff !important;
+}
+
+.email-contacts_form {
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.email-contacts_form::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-color: #d01181;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
 .email-contacts_form:hover {
   color: #d01181;
+}
+.email-contacts_form:hover::after {
+  width: 100%;
 }
 
 .request {
@@ -302,6 +382,10 @@
 }
 
 @media (max-width: 48em) {
+  .title {
+    font-size: 7.1vw;
+    line-height: 1.25;
+  }
   .contacts_form {
     padding-top: 14rem;
     padding-bottom: 18rem;

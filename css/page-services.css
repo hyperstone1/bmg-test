@@ -20,6 +20,7 @@
           transform-style: preserve-3d !important;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  cursor: pointer;
 }
 .services .swiper-slide-active img {
   height: 90% !important;

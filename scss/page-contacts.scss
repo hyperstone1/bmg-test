@@ -27,6 +27,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
+  opacity: 0;
   .contacts_form__info__img_gradient {
     display: none;
   }
@@ -35,6 +36,41 @@
   display: flex;
   gap: 5rem;
 }
+@keyframes gradient1 {
+  0% {
+    width: 61.6145833vw;
+    height: 58.333vw;
+    left: -20rem;
+  }
+  50% {
+    // width: 81.6145833vw;
+    // height: 68.333vw;
+    left: 0rem;
+  }
+  100% {
+    width: 61.6145833vw;
+    height: 58.333vw;
+    left: -20rem;
+    // width: 61.6145833vw;
+    // height: 58.333vw;
+  }
+}
+
+@keyframes mark {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ymaps-2-1-79-placemark-overlay:last-child .ymaps-2-1-79-image {
+  animation: mark 5s ease infinite;
+}
+
 .contact-details {
   padding-top: 23.3rem;
   margin: 0;
@@ -45,6 +81,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    animation: gradient 5s ease infinite;
     svg {
       width: 100%;
       height: 100%;
@@ -105,6 +142,10 @@
     width: 100%;
     height: 80vw;
   }
+  .ymaps-2-1-79-placemark-overlay:last-child .ymaps-2-1-79-image {
+    display: none;
+    animation: none;
+  }
   .contacts {
     .contacts_form__info__img_gradient {
       display: block;
@@ -120,6 +161,7 @@
       top: 23rem;
       filter: blur(13rem);
       left: -16rem;
+      animation: none;
     }
     &__gradient_info {
       width: 98.1333vw;

@@ -26,7 +26,13 @@
 body {
   // overflow: hidden;
 }
-
+.title {
+  font-family: 'akzidenz-grotesk';
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1.3;
+  color: #f9fbfe;
+}
 .contacts_form {
   position: relative;
   padding-top: 20.2rem;
@@ -184,11 +190,119 @@ body {
     box-shadow: inset 0 0 0 1px #d01181;
   }
 }
+.btn-detailed {
+  position: relative;
+  transition: all 0.3s;
+  .complex-btn-text {
+    z-index: 2;
+    color: #d01181;
+  }
+  svg {
+    z-index: 2;
+  }
+  svg path {
+    fill: #d01181;
+    transition: all 0.4s;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &::after {
+    box-shadow: inset 0 0 0 1px #ffffff;
+  }
+  &::before {
+    background: #d01181;
+    box-shadow: inset 0 0 0 8rem #ffffff;
+  }
+  &:hover {
+    svg path {
+      fill: #fff;
+    }
+    &::before {
+      box-shadow: inset 0 0 0 1px #ffffff;
+    }
+    &::after {
+      box-shadow: inset 0 0 0 1px #d01181;
+    }
+    span {
+      color: #fff !important;
+    }
+  }
+}
+
+// .btn-show {
+//   position: relative;
+//   svg {
+//     z-index: 2;
+//   }
+//   svg path {
+//     fill: #d01181;
+//     transition: all 0.4s;
+//   }
+//   &::before,
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     transition: all 0.4s ease;
+//     border-radius: 50%;
+//     z-index: 1;
+//   }
+//   &::after {
+//     box-shadow: inset 0 0 0 1px #ffffff;
+//   }
+//   &::before {
+//     background: #d01181;
+//     box-shadow: inset 0 0 0 8rem #ffffff;
+//   }
+//   &:hover {
+//     svg path {
+//       fill: #fff;
+//     }
+//     &::before {
+//       box-shadow: inset 0 0 0 1px #ffffff;
+//     }
+//     &::after {
+//       box-shadow: inset 0 0 0 1px #d01181;
+//     }
+//     span {
+//       color: #fff;
+//     }
+//   }
+// }
 
 .email-contacts_form {
+  position: relative;
   transition: all 0.4s;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    transform-origin: center;
+    background-color: #d01181;
+    transform: translateX(-50%);
+    transition: width 0.4s;
+  }
   &:hover {
     color: #d01181;
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -257,6 +371,10 @@ body {
   }
 }
 @media (max-width: 48em) {
+  .title {
+    font-size: 7.1vw;
+    line-height: 1.25;
+  }
   .contacts_form {
     padding-top: 14rem;
     padding-bottom: 18rem;

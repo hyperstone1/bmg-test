@@ -25,6 +25,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
+  opacity: 0;
 }
 .contacts .contacts_form__info__img_gradient {
   display: none;
@@ -35,6 +36,64 @@
   display: -ms-flexbox;
   display: flex;
   gap: 5rem;
+}
+
+@-webkit-keyframes gradient1 {
+  0% {
+    width: 61.6145833vw;
+    height: 58.333vw;
+    left: -20rem;
+  }
+  50% {
+    left: 0rem;
+  }
+  100% {
+    width: 61.6145833vw;
+    height: 58.333vw;
+    left: -20rem;
+  }
+}
+
+@keyframes gradient1 {
+  0% {
+    width: 61.6145833vw;
+    height: 58.333vw;
+    left: -20rem;
+  }
+  50% {
+    left: 0rem;
+  }
+  100% {
+    width: 61.6145833vw;
+    height: 58.333vw;
+    left: -20rem;
+  }
+}
+@-webkit-keyframes mark {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mark {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ymaps-2-1-79-placemark-overlay:last-child .ymaps-2-1-79-image {
+  -webkit-animation: mark 5s ease infinite;
+          animation: mark 5s ease infinite;
 }
 
 .contact-details {
@@ -48,6 +107,8 @@
   top: 0;
   left: 0;
   z-index: -1;
+  -webkit-animation: gradient 5s ease infinite;
+          animation: gradient 5s ease infinite;
 }
 .contact-details__gradient_map svg {
   width: 100%;
@@ -126,6 +187,11 @@
     width: 100%;
     height: 80vw;
   }
+  .ymaps-2-1-79-placemark-overlay:last-child .ymaps-2-1-79-image {
+    display: none;
+    -webkit-animation: none;
+            animation: none;
+  }
   .contacts .contacts_form__info__img_gradient {
     display: block;
   }
@@ -141,6 +207,8 @@
     -webkit-filter: blur(13rem);
             filter: blur(13rem);
     left: -16rem;
+    -webkit-animation: none;
+            animation: none;
   }
   .contact-details__gradient_info {
     width: 98.1333vw;

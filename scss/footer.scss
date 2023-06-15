@@ -27,14 +27,27 @@ footer {
       gap: 3.8rem;
       transition: all 0.25s ease;
       .navbar__menu-link {
-        transition: all 0.25s ease;
-      }
-      &:hover .navbar__menu-link {
-        color: #575757;
-      }
-      &:hover .navbar__menu-link:hover {
-        color: #d01181;
-        box-shadow: 0 2px 0 0 rgba(252, 1, 97, 0.363);
+        position: relative;
+        z-index: 2;
+        transition: all 0.4s ease;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          height: 1px;
+          width: 0;
+          transform-origin: center;
+          background-color: #d01181;
+          transform: translateX(-50%);
+          transition: width 0.4s;
+        }
+        &:hover {
+          color: #d01181;
+          &::after {
+            width: 100%;
+          }
+        }
       }
     }
     .footer__phone-lang {
