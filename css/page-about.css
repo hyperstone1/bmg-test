@@ -12,6 +12,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about_aim {
@@ -51,11 +54,13 @@
   font-family: "akzidenz-grotesk";
   font-weight: 700;
   font-size: 2.604166vw;
+  line-height: 1.3;
   color: #f9fbfe;
 }
 .about_aim-subtitle {
   font-weight: 500;
   font-size: 0.78125vw;
+  line-height: 1.4;
   color: #f9fbfe;
 }
 .about_aim__btn {
@@ -213,6 +218,7 @@
   gap: 1.5rem;
   font-weight: 500;
   font-size: 0.9375vw;
+  line-height: 1.5;
   color: #f9fbfe;
 }
 .about_company__footer {
@@ -328,7 +334,16 @@
   }
   .about_aim {
     padding-top: 3.2rem;
-    margin-bottom: 30rem;
+    margin-bottom: 26rem;
+  }
+  .about_aim__projects {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .about_aim_container {
     padding: 0 2rem;
@@ -349,6 +364,10 @@
     color: #f9fbfe;
   }
   .about_aim__complex {
+    padding-top: 21rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: 100%;
   }
   .about_aim__btn {
@@ -363,13 +382,17 @@
     gap: 2rem;
   }
   .about_aim__project-img {
-    width: 100%;
+    width: 82.4vw;
+    height: 56vw;
+  }
+  .about_aim__project-img:last-child {
+    display: none;
   }
   .about_aim__advantage {
-    left: 20rem;
-    bottom: -17rem;
-    width: 41.6vw;
-    height: 44vw;
+    left: 0rem;
+    bottom: -12rem;
+    width: 55.46666vw;
+    height: 29.6vw;
   }
   .about_aim__advantage-title {
     font-size: 4.8vw;
@@ -378,7 +401,7 @@
     font-size: 3.733vw;
   }
   .about_company__gradient {
-    top: -119rem;
+    top: -143rem;
     left: -2rem;
     -webkit-filter: blur(11rem);
     filter: blur(6rem);
@@ -413,13 +436,13 @@
     gap: 4rem;
   }
   .about_company__info-title {
-    font-family: "akzidenz-grotesk";
     font-style: normal;
     font-weight: 700;
     font-size: 4.8vw;
   }
   .about_company__info-subscription {
     font-weight: 500;
+    line-height: 1.35;
     font-size: 3.733vw;
   }
   .about_company__footer {
@@ -439,6 +462,7 @@
     gap: 1.8rem;
   }
   .about_advantages__list-gradient {
+    left: 0;
     background: linear-gradient(154.42deg, rgba(71, 11, 54, 0.21) 47.6%, rgba(34, 34, 34, 0) 83.86%);
   }
   .about_advantages__list-gradient img {
@@ -449,14 +473,18 @@
   .about_advantages__list-title {
     font-weight: 500;
     font-size: 3.733vw;
+    text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2), 0 -2px 0 rgba(0, 0, 0, 0.2), 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 0 rgba(0, 0, 0, 0.2), 2px 0 0 rgba(0, 0, 0, 0.2), -2px 0 0 rgba(0, 0, 0, 0.2), 2px 0 0 rgba(0, 0, 0, 0.2), -1px -2px 0 rgba(0, 0, 0, 0.2), 1px -2px 0 rgba(0, 0, 0, 0.2), -1px 2px 0 rgba(0, 0, 0, 0.2), 1px 2px 0 rgba(0, 0, 0, 0.2), -2px -1px 0 rgba(0, 0, 0, 0.2), 2px -1px 0 rgba(0, 0, 0, 0.2), -2px 1px 0 rgba(0, 0, 0, 0.2), 2px 1px 0 rgba(0, 0, 0, 0.2), -2px -2px 0 rgba(0, 0, 0, 0.2), 2px -2px 0 rgba(0, 0, 0, 0.2), -2px 2px 0 rgba(0, 0, 0, 0.2), 2px 2px 0 rgba(0, 0, 0, 0.2), -2px -2px 0 rgba(0, 0, 0, 0.2), 2px -2px 0 rgba(0, 0, 0, 0.2), -2px 2px 0 rgba(0, 0, 0, 0.2), 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
   .about_advantages__list-advantage {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 10.2rem 2.4rem 5.6rem 2.4rem;
-    width: 46.1333vw;
-    height: 41.3333vw;
+    padding: 6rem 11.8rem 6rem 3.2rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    width: 100%;
+    height: 20.8vw;
     overflow: hidden;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
     color: transparent;

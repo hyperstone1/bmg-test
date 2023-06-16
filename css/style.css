@@ -381,6 +381,52 @@
   width: 0.9375vw;
 }
 
+.arrow_fill-prev {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+}
+.arrow_fill-prev svg {
+  width: 100%;
+  height: 100%;
+}
+.arrow_fill-prev svg path {
+  width: 100%;
+  height: 100%;
+  fill: #d01181;
+  -webkit-transition: -webkit-clip-path 0.5s ease;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+  -webkit-clip-path: inset(0 0 0 100%);
+          clip-path: inset(0 0 0 100%);
+}
+
+.arrow_fill-next {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+}
+.arrow_fill-next svg {
+  width: 100%;
+  height: 100%;
+}
+.arrow_fill-next svg path {
+  width: 100%;
+  height: 100%;
+  fill: #d01181;
+  -webkit-transition: -webkit-clip-path 0.5s ease;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+}
+
 @media (max-width: 48em) {
   .title {
     font-size: 7.1vw;
@@ -420,6 +466,7 @@
     display: inline;
   }
   .contacts_form__info-img {
+    display: none;
     width: 66.66vw;
   }
   .contacts_form__info_description {

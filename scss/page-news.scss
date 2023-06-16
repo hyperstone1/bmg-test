@@ -87,19 +87,31 @@
             gap: 0.8rem;
             padding: 1.3rem 0rem;
             border-bottom: 1px solid #a1acb9;
+            cursor: pointer;
             &:last-child {
               border: none;
+            }
+            &:hover {
+              .news_summary__info_last_news_list-description {
+                color: #d01181;
+              }
+              .news_summary__info_last_news_list-chapter {
+                color: #222222;
+              }
             }
           }
           &-description {
             font-weight: 600;
             font-size: 0.9375vw;
             color: #222222;
+            transition: color 0.4s ease;
+            cursor: pointer;
           }
           &-chapter {
             font-weight: 500;
             font-size: 0.78125vw;
             color: #d01181;
+            transition: color 0.4s ease;
           }
         }
       }
@@ -116,6 +128,20 @@
       width: fit-content;
       margin-left: auto;
       background-color: #ffffff;
+      &_slider {
+        width: 74.6rem;
+        overflow: hidden;
+
+        .swiper-slide {
+          opacity: 0 !important;
+        }
+        .swiper-slide-next {
+          opacity: 1 !important;
+        }
+        .swiper-slide-active {
+          opacity: 1 !important;
+        }
+      }
       &-title {
         font-weight: 700;
         font-size: 1.25vw;
@@ -123,11 +149,12 @@
         transform: rotate(-90deg);
       }
       &-item {
+        width: 18.125vw;
         display: flex;
         flex-direction: row;
         gap: 3.4rem;
       }
-      &-pagination {
+      &-navigation {
         padding-left: 2rem;
         display: flex;
         flex-direction: row;
@@ -163,7 +190,7 @@
   }
   &_company {
     &-title {
-      margin-bottom: 4.9rem;
+      margin-bottom: 7.8rem;
       font-family: 'akzidenz-grotesk';
       font-style: normal;
       font-weight: 700;
@@ -276,12 +303,12 @@
           overflow: hidden;
           img {
             position: absolute;
-            top: 0;
+            top: -10rem;
             right: 0;
-            width: 100%;
-            height: 100%;
-            transition: top 0.6s ease-in-out, right 0.6s ease-in-out, filter 0.6s ease-in-out,
-              transform 0.6s ease-in-out;
+            width: 140%;
+            height: 140%;
+            filter: blur(5rem);
+            transition: top 1s ease, right 1s ease, filter 1s ease, transform 1s ease;
           }
         }
         &-item {
@@ -294,9 +321,10 @@
             .news_company__news_list-gradient {
               img {
                 transform: rotate(20deg);
-                filter: blur(10rem);
-                top: -9rem;
-                right: -9rem;
+                width: 140%;
+                height: 140%;
+                top: -20rem;
+                right: -30rem;
               }
             }
           }
@@ -344,64 +372,34 @@
 }
 .container_svg {
   position: relative;
-  width: 47px; /* Ширина иконки */
-  height: 16px; /* Высота иконки */
-}
-.arrow-right {
-  fill: #a1acb9; /* Исходный цвет иконки */
-}
-.arrow-fill path {
-  fill: #ff0000; /* Цвет, которым будет заполняться иконка */
-  opacity: 0;
-  transform-origin: right center; /* Определение точки трансформации */
-  transform: scaleX(0); /* Изначальное масштабирование по горизонтали */
-  transition: transform 0.5s, opacity 0.5s; /* Плавное изменение трансформации и прозрачности */
-}
-.container_arrow-fill {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
+  width: 100%; /* Ширина иконки */
+  height: fit-content; /* Высота иконки */
+  &:nth-child(1):hover {
+    .arrow_fill-prev {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-.container_svg:hover {
-  .arrow-fill path {
-    opacity: 1;
-    transform: scaleX(1); /* Масштабирование до полной заполненности */
+      svg path {
+        stroke: #d01181;
+        clip-path: inset(0 0 0 0);
+      }
+    }
+  }
+  &:nth-child(2):hover {
+    .arrow_fill-next {
+      position: absolute;
+      top: 0;
+      left: 0;
+      svg path {
+        stroke: #d01181;
+        clip-path: inset(0 0 0 0);
+      }
+    }
   }
 }
-
-// .arrow-left {
-//   fill: transparent;
-// }
-
-// .arrow-left-path {
-//   fill: #a1acb9;
-//   stroke-dasharray: 100%;
-//   stroke-dashoffset: 100%;
-//   transition: stroke-dashoffset 0.4s;
-// }
-
-// .arrow-left:hover .arrow-left-path {
-//   stroke-dashoffset: 0;
-//   transition: stroke-dashoffset 0.4s;
-// }
-// .arrow-left:hover .arrow-left-path::before {
-//   fill: #d01181;
-//   transition: fill 0.4s ease-out;
-// }
-
-// @keyframes fillAnimation {
-//   0% {
-//     left: -100%;
-//     width: 0;
-//   }
-//   100% {
-//     width: 100%;
-
-//     left: 0;
-//   }
-// }
 @media (max-width: 48em) {
   .news {
     padding-top: 29.8rem;
@@ -488,7 +486,7 @@
 
           // flex-direction: column;
         }
-        &-pagination {
+        &-navigation {
           svg {
             width: 12vw;
           }

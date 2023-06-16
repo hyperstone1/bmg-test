@@ -528,10 +528,42 @@
   gap: 3.5rem;
 }
 .news__navigation-prev {
+  position: relative;
+  width: 4.5rem;
   cursor: pointer;
 }
+.news__navigation-prev svg {
+  width: 100%;
+  height: 100%;
+}
+.news__navigation-prev:hover .arrow_fill-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.news__navigation-prev:hover .arrow_fill-prev svg path {
+  stroke: #d01181;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
 .news__navigation-next {
+  position: relative;
+  width: 4.5rem;
   cursor: pointer;
+}
+.news__navigation-next svg {
+  width: 100%;
+  height: 100%;
+}
+.news__navigation-next:hover .arrow_fill-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.news__navigation-next:hover .arrow_fill-next svg path {
+  stroke: #d01181;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
 }
 .news__list {
   position: relative;

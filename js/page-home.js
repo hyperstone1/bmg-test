@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
       slidesPerView: 'auto',
       spaceBetween: width > 768 ? 50 : 10,
       navigation: {
-        nextEl: '.news__navigation-next',
-        prevEl: '.news__navigation-prev',
+        nextEl: '.news_summary__projects-next',
+        prevEl: '.news_summary__projects-prev',
       },
     });
     if (galleryTop) {

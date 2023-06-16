@@ -189,7 +189,87 @@
 }
 .portfolio_projects__filter {
   border: 1px solid rgba(118, 118, 118, 0.26);
-  overflow-x: auto;
+  font-weight: 600;
+  font-size: 0.9375vw;
+}
+.portfolio_projects__filter_all {
+  margin-left: 20rem;
+  height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.portfolio_projects__filter_all-btn {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 0rem;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+  cursor: pointer;
+}
+.portfolio_projects__filter_all-btn:hover {
+  color: #d01181;
+}
+.portfolio_projects__filter_all-btn:hover::after {
+  width: 100%;
+}
+.portfolio_projects__filter_all-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  height: 1px;
+  width: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-color: #d01181;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+.portfolio_projects__filter li {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  padding: 1rem 0rem;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.portfolio_projects__filter li:hover {
+  color: #d01181;
+}
+.portfolio_projects__filter li:hover::after {
+  width: 100%;
+}
+.portfolio_projects__filter li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  height: 1px;
+  width: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-color: #d01181;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
 }
 .portfolio_projects__filter-category {
   position: relative;
@@ -230,6 +310,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -248,6 +331,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   row-gap: 5.4rem;
   color: #ffffff;
 }
@@ -259,6 +345,7 @@
 }
 .portfolio_projects__projects-item {
   width: 42.689583vw;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,7 +364,7 @@
           filter: blur(15px);
 }
 .portfolio_projects__projects_text {
-  padding: 4rem;
+  padding: 4rem 4rem 0rem 4rem;
   font-weight: 500;
   font-size: 0.9375vw;
   background: #222222;
@@ -285,11 +372,17 @@
       -ms-flex: 1;
           flex: 1;
 }
+.portfolio_projects__projects_text-container {
+  position: relative;
+  height: 0rem;
+  overflow: hidden;
+  -webkit-transition: height 0.4s ease-in;
+  transition: height 0.4s ease-in;
+}
 .portfolio_projects__projects_text-title {
   padding-bottom: 2.4rem;
   font-weight: 600;
   font-size: 1.5625vw;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -389,9 +482,17 @@
   z-index: 1;
 }
 
-.active_category {
-  color: #d01181;
-  border-bottom: 1px solid #d01181;
+.text-visible {
+  height: 29.7rem;
+}
+
+.title-border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.filter-open {
+  padding: 0rem 2rem 2rem 0rem;
+  height: 31.6rem;
 }
 
 @media (max-width: 48em) {
@@ -579,5 +680,8 @@
   .portfolio_projects__next-text {
     width: 16vw;
     font-size: 2.9333vw;
+  }
+  .text-visible {
+    height: auto;
   }
 }

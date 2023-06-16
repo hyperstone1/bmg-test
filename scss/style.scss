@@ -370,6 +370,42 @@ body {
     width: 0.9375vw;
   }
 }
+.arrow_fill-prev {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  svg path {
+    width: 100%;
+    height: 100%;
+    fill: #d01181;
+    transition: clip-path 0.5s ease;
+    clip-path: inset(0 0 0 100%);
+  }
+}
+.arrow_fill-next {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  svg path {
+    width: 100%;
+    height: 100%;
+    fill: #d01181;
+    transition: clip-path 0.5s ease;
+    clip-path: inset(0 100% 0 0);
+  }
+}
 @media (max-width: 48em) {
   .title {
     font-size: 7.1vw;
@@ -406,6 +442,7 @@ body {
         }
       }
       &-img {
+        display: none;
         width: 66.66vw;
       }
       &_description {
