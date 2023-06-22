@@ -105,7 +105,7 @@
           flex-direction: column;
   gap: 0.6rem;
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.604166vw;
   color: #ffffff;
 }
@@ -174,8 +174,7 @@
 .portfolio_projects__title-title {
   width: 35.8854166vw;
   font-family: "akzidenz-grotesk";
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.604166vw;
 }
 .portfolio_projects__title-subtitle {
@@ -487,6 +486,11 @@
   opacity: 1;
   z-index: 1;
 }
+.portfolio .btn-show_more {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
 .text-visible {
   height: 29.7rem;
@@ -502,6 +506,18 @@
 }
 
 @media (max-width: 48em) {
+  .filter-open {
+    height: 36.6rem;
+  }
+  .portfolio_projects__filter_all {
+    margin-left: 12rem;
+  }
+  .portfolio_projects__filter_all .portfolio_projects__filter-category {
+    font-size: 3.0666vw;
+  }
+  .btn-show_more--text {
+    display: none;
+  }
   .portfolio {
     padding-top: 28rem;
   }
@@ -599,6 +615,10 @@
   .portfolio_projects__filter-category {
     font-size: 4.2666vw;
   }
+  .portfolio_projects__filter_all-btn {
+    font-size: 3vw;
+    width: 14rem;
+  }
   .portfolio_projects-filter {
     width: 100%;
     padding: 3rem 4rem;
@@ -661,9 +681,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 4.4rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 4.8vw;

@@ -79,7 +79,7 @@
         flex-direction: column;
         gap: 0.6rem;
         font-family: 'akzidenz-grotesk';
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2.604166vw;
         color: #ffffff;
       }
@@ -136,8 +136,7 @@
       &-title {
         width: 35.8854166vw;
         font-family: 'akzidenz-grotesk';
-        font-style: normal;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2.604166vw;
       }
       &-subtitle {
@@ -394,6 +393,9 @@
       }
     }
   }
+  .btn-show_more {
+    justify-content: center;
+  }
 }
 .text-visible {
   height: 29.7rem;
@@ -407,6 +409,18 @@
 }
 
 @media (max-width: 48em) {
+  .filter-open {
+    height: 36.6rem;
+  }
+  .portfolio_projects__filter_all {
+    margin-left: 12rem;
+    .portfolio_projects__filter-category {
+      font-size: 3.0666vw;
+    }
+  }
+  .btn-show_more--text {
+    display: none;
+  }
   .portfolio {
     padding-top: 28rem;
     &_main {
@@ -499,6 +513,10 @@
         &-category {
           font-size: 4.2666vw;
         }
+        &_all-btn {
+          font-size: 3vw;
+          width: 14rem;
+        }
       }
       &-filter {
         width: 100%;
@@ -546,7 +564,7 @@
         &-category {
           display: inline-flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           padding: 4.4rem;
           border: 1px solid rgba(255, 255, 255, 0.2);
           font-size: 4.8vw;

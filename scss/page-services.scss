@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 20.3rem;
   overflow: hidden;
+  margin-bottom: 0;
   .swiper-slide-active img {
     height: 43rem !important;
     transition: height 0.4s;
@@ -55,7 +56,7 @@
       &-title {
         width: 32.427083vw;
         font-family: 'akzidenz-grotesk';
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2.6041666vw;
         color: #ffffff;
       }
@@ -171,6 +172,7 @@
     }
   }
   &_list {
+    margin-bottom: 0;
     &_container {
       padding: 0rem 9.8rem;
       display: flex;
@@ -187,7 +189,7 @@
         width: 44.9479166vw;
         font-family: 'akzidenz-grotesk';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2.604166vw;
       }
       &-subtitle {
@@ -549,7 +551,7 @@
         gap: 2.1rem;
         margin-top: 4rem;
         padding-top: 0rem;
-        background: #f9fbfe;
+        background: rgba(255, 255, 255, 0.7);
         border: 1px solid rgba(255, 255, 255, 0.2);
         .btn-about {
           display: none;
@@ -622,6 +624,7 @@
       &_container {
         padding: 0rem 2rem;
         display: flex;
+        align-items: center;
         gap: 8rem;
       }
       &__title {
@@ -707,7 +710,10 @@
             line-height: 1.35;
           }
           &-btn {
+            position: relative;
+            display: block;
             margin-top: 4.8rem;
+            z-index: 3;
           }
         }
         &-category {

@@ -52,7 +52,7 @@
 }
 .news_summary__text-title {
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.6041666vw;
   color: #ffffff;
 }
@@ -99,7 +99,7 @@
 .news_summary__info_last_news-title {
   padding-bottom: 1.3rem;
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.25vw;
   color: #ffffff;
 }
@@ -176,6 +176,7 @@
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
+  margin-bottom: 5rem;
   background-color: #ffffff;
 }
 .news_summary__projects_slider {
@@ -254,7 +255,7 @@
   margin-bottom: 7.8rem;
   font-family: "akzidenz-grotesk";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.6041666vw;
   color: #f9fbfe;
 }
@@ -546,6 +547,7 @@
   .news_summary__projects {
     position: relative;
     width: 100%;
+    margin-bottom: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

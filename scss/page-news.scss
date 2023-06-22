@@ -36,7 +36,7 @@
       }
       &-title {
         font-family: 'akzidenz-grotesk';
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2.6041666vw;
         color: #ffffff;
       }
@@ -68,7 +68,7 @@
         &-title {
           padding-bottom: 1.3rem;
           font-family: 'akzidenz-grotesk';
-          font-weight: 700;
+          font-weight: 500;
           font-size: 1.25vw;
           color: #ffffff;
         }
@@ -127,6 +127,7 @@
       padding-left: 0;
       width: fit-content;
       margin-left: auto;
+      margin-bottom: 5rem;
       background-color: #ffffff;
       &_slider {
         padding-left: 37.3rem;
@@ -199,7 +200,7 @@
       margin-bottom: 7.8rem;
       font-family: 'akzidenz-grotesk';
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 2.6041666vw;
       color: #f9fbfe;
     }
@@ -448,6 +449,7 @@
       &__projects {
         position: relative;
         width: 100%;
+        margin-bottom: 0;
         flex-direction: column;
         justify-content: start;
         align-items: start;

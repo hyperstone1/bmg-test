@@ -35,7 +35,7 @@
 .news_details__info-title {
   margin: 4.1rem 0rem 7.8rem 0rem;
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.604166vw;
   color: #ffffff;
 }
@@ -94,7 +94,7 @@
 .news_details__other_news-title {
   font-family: "akzidenz-grotesk";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.25vw;
   line-height: 1.2;
   color: #ffffff;

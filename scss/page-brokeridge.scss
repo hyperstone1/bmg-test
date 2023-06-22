@@ -24,7 +24,6 @@
     }
 
     &__text {
-      margin-left: 26rem;
       width: 56.3rem;
       display: flex;
       flex-direction: column;
@@ -70,6 +69,7 @@
         font-weight: 700;
         font-size: 2.6041666vw;
         color: #ffffff;
+        letter-spacing: -0.02em;
       }
       &-description {
         width: 90%;
@@ -219,6 +219,7 @@
       font-style: normal;
       font-weight: 700;
       font-size: 2.6041666vw;
+      letter-spacing: -0.01em;
       color: #f9fbfe;
     }
     &__show_more {
@@ -610,7 +611,7 @@
       &__container {
         order: 2;
         position: relative;
-        padding-left: 2rem;
+        padding: 0rem 2rem;
         display: flex;
         flex-direction: row;
         gap: 26.7rem;
@@ -815,7 +816,7 @@
     justify-content: center;
     width: 100%;
     height: 11.6rem;
-    background: #f9fbfe;
+    background: rgb(255 255 255 / 70%);
     color: #d01181;
     text-transform: uppercase;
     font-weight: 600;

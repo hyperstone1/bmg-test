@@ -107,8 +107,8 @@
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: gradient 5s ease infinite;
-          animation: gradient 5s ease infinite;
+  -webkit-animation: gradient1 5s ease infinite;
+          animation: gradient1 5s ease infinite;
 }
 .contact-details__gradient_map svg {
   width: 100%;
@@ -146,7 +146,7 @@
   padding-bottom: 7.8rem;
   font-family: "akzidenz-grotesk";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.6041vw;
   color: #ffffff;
 }
@@ -180,6 +180,7 @@
   font-size: 1.25vw;
   color: #ffffff;
   font-family: "akzidenz-grotesk";
+  font-weight: 500;
 }
 
 @media (max-width: 48em) {

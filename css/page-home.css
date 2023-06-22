@@ -5,7 +5,8 @@
   100% {
     opacity: 1;
   }
-}@keyframes thumbAnim {
+}
+@keyframes thumbAnim {
   0% {
     opacity: 0;
   }
@@ -94,7 +95,7 @@
   height: fit-content;
 }
 .benefits_container .complex__container .complex__subscription {
-  width: 36.04166vw;
+  width: 30.04166vw;
 }
 .benefits_container .complex__container .complex__subscription-subtitle {
   font-weight: 600;
@@ -103,10 +104,10 @@
   margin-bottom: 3.2rem;
 }
 .benefits_container .complex__container .complex__subscription-title {
-  font-weight: 700;
+  font-weight: 500;
   font-family: "akzidenz-grotesk";
   font-size: 2.60416vw;
-  line-height: 130%;
+  line-height: 1.3;
   color: #222222;
   margin-bottom: 7.5rem;
 }
@@ -203,9 +204,10 @@
 }
 .benefits_container .complex__advantages__list .advantages__list__item .item-title {
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
-  font-size: 1.25vw;
-  color: #222222;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+  color: #101010;
 }
 .benefits_container .complex__advantages__list .advantages__list__item .item-subscription {
   font-weight: 500;
@@ -247,9 +249,9 @@
 }
 .services__title_container .services__title-title {
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.604166vw;
-  line-height: 130%;
+  line-height: 1.3;
   color: #f9fbfe;
 }
 .services__title_container .services__title-subtitle {
@@ -322,6 +324,7 @@
   gap: 3rem;
   width: 20.52083vw;
   height: 100%;
+  cursor: pointer;
 }
 .services .services_list-service .service_img {
   width: 100%;
@@ -342,57 +345,15 @@
   font-size: 1.5625vw;
   line-height: 140%;
   color: #ffffff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .services .services_list-service:hover .service_img img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-.services .services_list-service:hover .services__more {
-  opacity: 1;
-}
-.services .services_list-service .services__more {
-  position: absolute;
-  top: 13rem;
-  left: 28rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  z-index: 1;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0;
-}
-.services .services_list-service .services__more .btn-services {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1.5rem;
-  width: 7.8125vw;
-  height: 7.8125vw;
-  background: #d01181;
-  border-radius: 50%;
-  color: #f9fbfe;
-}
-.services .services_list-service .services__more .btn-services svg {
-  width: 1.43697916vw;
-}
-.services .services_list-service .services__more .btn-services .btn-services_more {
-  z-index: 2;
+.services .services_list-service:hover .service__title {
   color: #d01181;
-  font-weight: 600;
-  font-size: 0.78125vw;
-  line-height: 1.2;
-  text-transform: uppercase;
 }
 
 .projects__title {
@@ -406,7 +367,7 @@
 }
 .projects__title-title {
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.604166vw;
   line-height: 130%;
   color: #f9fbfe;
@@ -579,6 +540,13 @@
   width: 54.2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
+  cursor: pointer;
+}
+.news__list-item:hover .news__list_bottom-gradient {
+  width: 220%;
+  height: 150%;
+  left: -62rem;
+  top: -25rem;
 }
 .news__list-item_container {
   display: -webkit-box;
@@ -659,6 +627,8 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
 }
 .news__list_bottom-gradient img {
   width: 157%;
@@ -773,10 +743,9 @@
   }
   .benefits_container .complex__container .complex__subscription .complex__subscription-title {
     font-family: "akzidenz-grotesk";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 27px;
-    line-height: 125%;
+    font-weight: 500;
+    font-size: 5.4rem;
+    line-height: 1.25;
     color: #222222;
   }
   .benefits_container .complex__container .complex__subscription .complex__subscription-btn {
@@ -1036,8 +1005,8 @@
     width: 158%;
     height: 116%;
     z-index: -1;
-    -webkit-transform: rotate(31deg) translate(-64px, 22px);
-            transform: rotate(31deg) translate(-64px, 22px);
+    -webkit-transform: rotate(31deg) translate(-12.8rem, 4.4rem);
+            transform: rotate(31deg) translate(-12.8rem, 4.4rem);
   }
   .news__list_bottom-gradient img {
     width: 157%;
