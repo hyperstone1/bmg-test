@@ -1,6 +1,6 @@
 .swiper-container {
-  justify-content: space-between;
-  padding-right: 9.8rem;
+  // justify-content: space-between;
+  // padding-right: 9.8rem;
 }
 .swiper-wrapper {
 }
@@ -18,36 +18,7 @@
     object-fit: cover;
   }
 }
-.swiper-thumbs {
-  position: relative;
-  width: 40.885416vw;
-  .swiper-slide {
-    display: flex;
-    filter: brightness(0.5);
-    &:nth-child(2) {
-      width: 100%;
-      padding-bottom: 11.8rem;
-      img {
-        width: 49.3rem;
-      }
-    }
-    &:nth-child(3) {
-      justify-content: end;
-      width: 100%;
-      img {
-        width: 15.20833vw;
-      }
-    }
-    &:nth-child(4) {
-      position: relative;
-      width: 100%;
-      top: -10rem;
-      img {
-        width: 17.1875vw;
-      }
-    }
-  }
-}
+
 .swiper-slide-thumb-active {
   /* стили для активной миниатюры */
   display: none !important;
@@ -88,6 +59,9 @@
     content: '' !important;
     background-color: #ccc;
   }
+}
+.swiper-button-prev {
+  display: none !important;
 }
 .swiper-button-next {
   left: auto !important;

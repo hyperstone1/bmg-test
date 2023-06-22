@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let galleryTop;
   let sliderAdvantages;
   let sliderServices;
-  const swiperThumbs = document.querySelector('.swiper-thumbs .swiper-wrapper');
   const thumbs = [
     './images/home/projects_1.webp',
     './images/home/tc_vodniy.webp',
@@ -127,54 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
           const slideImg = document.createElement('img');
           slideImg.src = `${thumb}`;
           slide.appendChild(slideImg);
-          swiperThumbs.appendChild(slide);
         });
       }
-
-      //   <div class="swiper-slide">
-      //   <img src="./images/home/projects_1.png" alt="Thumbnail 1" />
-      // </div>
-      // <div class="swiper-slide">
-      //   <img src="./images/home/tc_vodniy.jpg" alt="Thumbnail 2" />
-      // </div>
-      // <div class="swiper-slide">
-      //   <img src="./images/home/bc_chayka.jpg" alt="Thumbnail 3" />
-      // </div>
-      // <div class="swiper-slide">
-      //   <img src="./images/home/tc_yasniy.jpg" alt="Thumbnail 4" />
-      // </div>
-
-      // Добавляем миниатюры
-      var galleryThumbs = new Swiper('.swiper-thumbs', {
-        spaceBetween: 10,
-        slidesPerView: 'auto',
-        direction: 'vertical',
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        on: {
-          slideChange: function (swiper) {
-            // используется параметр loop true (см. https://swiperjs.com/swiper-api#prop-swiper-realIndex)
-            let activeIndex = swiper.realIndex;
-            // let cards = document.querySelectorAll('.doc-card');
-            console.log(activeIndex);
-          },
-        },
-        // on: {
-        //   slideChange: function () {
-        //     var activeIndex = this.activeIndex;
-        //     var mainSliderActiveIndex = mainSlider.activeIndex;
-
-        //     // Если активный слайд в миниатюрном слайдере не соответствует активному слайду в основном слайдере
-        //     if (activeIndex !== mainSliderActiveIndex) {
-        //       // Перемещаем активную миниатюру в начало списка
-        //       this.prependSlide(this.slides[activeIndex].outerHTML);
-        //       this.removeSlide(activeIndex + 1);
-        //       this.slideTo(0, 0, false);
-        //     }
-        //   },
-        // },
-      });
 
       //Добавляем слайдер
       // galleryTop = new Swiper('.swiper-slider', {
@@ -191,33 +144,22 @@ document.addEventListener('DOMContentLoaded', function () {
       // });
 
       //новое
+
+      const projectsThumbs = document.querySelector('.projects_slider__thumbs');
       galleryTop = new Swiper('.swiper-slider', {
         slidesPerView: 1,
         spaceBetween: 10,
         effect: 'fade', // Используем эффект fade для плавного появления слайдов
+        loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-
-        thumbs: {
-          swiper: galleryThumbs,
-        },
       });
-      galleryTop.on('slideChange', function () {
-        var activeIndex = galleryTop.realIndex;
-
-        var thumbsSlides = galleryThumbs.slides;
-        var lastThumbIndex = thumbsSlides.length - 1;
-
-        // Перемещаем предыдущий слайд из основного слайдера в thumbs-slider
-        galleryThumbs.prependSlide([thumbsSlides[activeIndex].outerHTML]);
-
-        // Удаляем последний слайд из thumbs-slider
-        galleryThumbs.removeSlide(lastThumbIndex + 1);
-
-        // Переключаем активный слайд в thumbs-slider
-        galleryThumbs.slideTo(lastThumbIndex);
+      galleryTop.on('realIndexChange', function () {
+        console.log(this.activeIndex);
+        const thumbsItems = document.querySelectorAll('.projects_slider__thumbs-item');
+        projectsThumbs.appendChild(thumbsItems[0]);
       });
     }
   }
@@ -280,8 +222,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   sliderForServices();
-
-  swiperThumbs.addEventListener('click', (e) => thumbsClick(e));
 
   // Слушатели на ресайз и загрузку страницы
   window.addEventListener('resize', addSlider);

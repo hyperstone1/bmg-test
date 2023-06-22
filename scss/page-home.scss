@@ -318,6 +318,50 @@
       }
     }
   }
+  &_slider {
+    &_container {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 9.8rem;
+    }
+    &__thumbs {
+      position: relative;
+      width: 40.885416vw;
+      height: 100%;
+      &-item {
+        display: flex;
+        filter: brightness(0.5);
+        &:first-child {
+          position: absolute;
+          right: -101rem;
+          width: 94.7rem;
+          height: 81.8rem;
+        }
+        &:nth-child(2) {
+          width: 100%;
+          padding-bottom: 11.8rem;
+          img {
+            width: 49.3rem;
+          }
+        }
+        &:nth-child(3) {
+          justify-content: end;
+          width: 100%;
+          img {
+            width: 15.20833vw;
+          }
+        }
+        &:nth-child(4) {
+          position: relative;
+          width: 100%;
+          top: -10rem;
+          img {
+            width: 17.1875vw;
+          }
+        }
+      }
+    }
+  }
   .swiper_slide__title {
     position: absolute;
     top: 6rem;
@@ -753,6 +797,9 @@
       }
     }
     .projects_slider {
+      &__thumbs {
+        width: 40.885416vw;
+      }
       .swiper-thumbs {
         display: none;
       }
