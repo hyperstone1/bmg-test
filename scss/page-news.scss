@@ -160,6 +160,12 @@
         display: flex;
         flex-direction: row;
         gap: 3.4rem;
+        cursor: pointer;
+        &:hover {
+          .news_summary__project-title {
+            color: #d01181;
+          }
+        }
       }
       &-navigation {
         padding-left: 2rem;
@@ -187,6 +193,7 @@
         font-weight: 500;
         font-size: 0.9375vw;
         color: #a1acb9;
+        transition: color 0.4s;
       }
       &-description {
         font-weight: 600;
