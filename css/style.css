@@ -143,6 +143,7 @@
 .contacts_form__info-info {
   width: 18.4375vw;
   margin-left: auto;
+  line-height: 1.4;
 }
 .contacts_form__info__email {
   display: -webkit-box;
