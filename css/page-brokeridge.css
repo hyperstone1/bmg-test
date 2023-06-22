@@ -98,7 +98,7 @@
 }
 .brokeridge_summary__text-title {
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.6041666vw;
   color: #ffffff;
   letter-spacing: -0.02em;
@@ -159,7 +159,7 @@
 .brokeridge_summary__info_last_brokeridge-title {
   padding-bottom: 1.3rem;
   font-family: "akzidenz-grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.25vw;
   color: #ffffff;
 }
@@ -295,7 +295,7 @@
   margin-bottom: 7.8rem;
   font-family: "akzidenz-grotesk";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.6041666vw;
   letter-spacing: -0.01em;
   color: #f9fbfe;
@@ -598,7 +598,7 @@
   .brokeridge_summary__info_last_brokeridge-title {
     padding-bottom: 1.3rem;
     font-family: "akzidenz-grotesk";
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.25vw;
     color: #ffffff;
   }
