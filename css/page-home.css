@@ -429,8 +429,8 @@
 }
 .projects_slider__thumbs-item:first-child {
   position: absolute;
-  right: -101rem;
-  width: 94.7rem;
+  right: -96.5rem;
+  width: 84.7rem;
   height: 81.8rem;
 }
 .projects_slider__thumbs-item:nth-child(2) {
@@ -941,26 +941,40 @@
     width: 4.266vw;
   }
   .projects .projects_slider__thumbs {
-    width: 40.885416vw;
-  }
-  .projects .projects_slider .swiper-thumbs {
     display: none;
+  }
+  .projects .projects_slider .swiper-nav {
+    padding-top: 5.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 4.8rem;
+  }
+  .projects .projects_slider .swiper-nav .swiper-prev {
+    width: 9rem;
+  }
+  .projects .projects_slider .swiper-nav .swiper-prev svg {
+    width: 100%;
+    height: 100%;
+  }
+  .projects .projects_slider_container {
+    padding-right: 0rem;
   }
   .projects .projects_slider .swiper-container {
     width: 93.333vw;
+    height: 144vw;
     margin: 0 auto;
     padding: 0;
   }
-  .projects .projects_slider .swiper-container .swiper-slider {
-    width: 100%;
-    height: 144vw;
-  }
-  .projects .projects_slider .swiper-container .swiper-slider .swiper_slide__title {
+  .projects .projects_slider .swiper-container .swiper_slide__title {
     top: 4rem;
     left: 4rem;
     font-size: 4.8vw;
   }
-  .projects .projects_slider .swiper-container .swiper-slider .slide_item {
+  .projects .projects_slider .swiper-container .slide_item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -971,25 +985,25 @@
     text-align: left;
     padding: 0rem 4rem;
   }
-  .projects .projects_slider .swiper-container .swiper-slider .slide_item .slide_item-name {
+  .projects .projects_slider .swiper-container .slide_item .slide_item-name {
     width: 100%;
     padding: 5rem 0rem 3.5rem 0rem;
     font-size: 4.8vw;
     border-bottom: 1px solid rgba(72, 87, 141, 0.2);
   }
-  .projects .projects_slider .swiper-container .swiper-slider .slide_item .slide_item__square {
+  .projects .projects_slider .swiper-container .slide_item .slide_item__square {
     width: 100%;
     padding: 1rem 0rem 1.25rem 0rem;
     border-bottom: 1px solid rgba(72, 87, 141, 0.2);
   }
-  .projects .projects_slider .swiper-container .swiper-slider .slide_item .slide_item__square .square_name {
+  .projects .projects_slider .swiper-container .slide_item .slide_item__square .square_name {
     font-size: 4.2666vw;
     color: #a1acb9;
   }
-  .projects .projects_slider .swiper-container .swiper-slider .slide_item .slide_item__square .square__numb {
+  .projects .projects_slider .swiper-container .slide_item .slide_item__square .square__numb {
     font-size: 4.8vw;
   }
-  .projects .projects_slider .swiper-container .swiper-slider .slide_item .slide_item__description {
+  .projects .projects_slider .swiper-container .slide_item .slide_item__description {
     padding: 2rem 0rem 4rem 0rem;
     font-size: 4.2666vw;
   }

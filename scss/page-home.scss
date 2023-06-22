@@ -333,8 +333,8 @@
         filter: brightness(0.5);
         &:first-child {
           position: absolute;
-          right: -101rem;
-          width: 94.7rem;
+          right: -96.5rem;
+          width: 84.7rem;
           height: 81.8rem;
         }
         &:nth-child(2) {
@@ -798,51 +798,61 @@
     }
     .projects_slider {
       &__thumbs {
-        width: 40.885416vw;
-      }
-      .swiper-thumbs {
         display: none;
+      }
+      .swiper-nav {
+        padding-top: 5.8rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 4.8rem;
+        .swiper-prev {
+          width: 9rem;
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      &_container {
+        padding-right: 0rem;
       }
       .swiper-container {
         width: 93.333vw;
         // height: 540px;
+        height: 144vw;
         margin: 0 auto;
         padding: 0;
-        .swiper-slider {
-          width: 100%;
-          height: 144vw;
-          .swiper_slide__title {
-            top: 4rem;
-            left: 4rem;
+        .swiper_slide__title {
+          top: 4rem;
+          left: 4rem;
+          font-size: 4.8vw;
+        }
+        .slide_item {
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+          padding: 0rem 4rem;
+          .slide_item-name {
+            width: 100%;
+            padding: 5rem 0rem 3.5rem 0rem;
             font-size: 4.8vw;
+            border-bottom: 1px solid rgba(72, 87, 141, 0.2);
           }
-          .slide_item {
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            padding: 0rem 4rem;
-            .slide_item-name {
-              width: 100%;
-              padding: 5rem 0rem 3.5rem 0rem;
-              font-size: 4.8vw;
-              border-bottom: 1px solid rgba(72, 87, 141, 0.2);
-            }
-            .slide_item__square {
-              width: 100%;
-              padding: 1rem 0rem 1.25rem 0rem;
-              border-bottom: 1px solid rgba(72, 87, 141, 0.2);
-              .square_name {
-                font-size: 4.2666vw;
-                color: #a1acb9;
-              }
-              .square__numb {
-                font-size: 4.8vw;
-              }
-            }
-            .slide_item__description {
-              padding: 2rem 0rem 4rem 0rem;
+          .slide_item__square {
+            width: 100%;
+            padding: 1rem 0rem 1.25rem 0rem;
+            border-bottom: 1px solid rgba(72, 87, 141, 0.2);
+            .square_name {
               font-size: 4.2666vw;
+              color: #a1acb9;
             }
+            .square__numb {
+              font-size: 4.8vw;
+            }
+          }
+          .slide_item__description {
+            padding: 2rem 0rem 4rem 0rem;
+            font-size: 4.2666vw;
           }
         }
       }
