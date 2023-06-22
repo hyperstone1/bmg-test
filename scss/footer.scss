@@ -81,21 +81,22 @@ footer {
   .footer_copyright {
     display: flex;
     // justify-content: space-between;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 5.9rem 0rem 4rem 0rem;
     .footer_copyright-copy,
     .footer_copyright-year {
       font-weight: 500;
       font-size: 0.78125vw;
-      line-height: 140%;
+      line-height: 1.4;
       color: #ffffff;
     }
     .footer_copyright-year {
-      padding-left: 50.5rem;
+      padding-left: 44.5rem;
     }
     .footer_copyright__developer {
       padding-left: 61rem;
+      margin-right: 1.5rem;
       display: flex;
       align-items: center;
       gap: 1.5rem;
