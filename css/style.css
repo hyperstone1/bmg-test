@@ -150,6 +150,7 @@
 }
 
 .btn-about {
+  width: 2.8rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,52 +161,43 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 3.6979166vw;
-  height: 3.6979166vw;
-  background: #ffffff;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 2.8rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
 }
-.btn-about svg {
-  width: 1.145833vw;
-  height: 1.145833vw;
-  z-index: 2;
+
+.btn-show_more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
 }
-.btn-about svg path {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+.btn-show_more--text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
-.btn-about::before, .btn-about::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+.btn-show_more--icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2.8rem;
+}
+.btn-show_more--icon svg {
   width: 100%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  border-radius: 50%;
-  z-index: 1;
+  height: 100%;
 }
-.btn-about:hover svg path {
-  fill: #fff;
-}
-.btn-about::after {
-  -webkit-box-shadow: inset 0 0 0 1px #ffffff;
-          box-shadow: inset 0 0 0 1px #ffffff;
-}
-.btn-about::before {
-  background: #d01181;
-  -webkit-box-shadow: inset 0 0 0 60px #ffffff;
-          box-shadow: inset 0 0 0 60px #ffffff;
-}
-.btn-about:hover::before {
-  -webkit-box-shadow: inset 0 0 0 1px #ffffff;
-          box-shadow: inset 0 0 0 1px #ffffff;
-}
-.btn-about:hover::after {
-  -webkit-box-shadow: inset 0 0 0 1px #d01181;
-          box-shadow: inset 0 0 0 1px #d01181;
+
+.complex_btn-text {
+  color: #000;
 }
 
 .btn-detailed {
@@ -530,5 +522,17 @@
   }
   .btn-detailed svg {
     width: 4.2666vw;
+  }
+  .btn-show_more {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .btn-show_more--text {
+    font-size: 2.8rem;
+  }
+  .btn-show_more--icon {
+    width: 5.6rem;
   }
 }

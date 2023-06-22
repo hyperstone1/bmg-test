@@ -401,6 +401,12 @@
   color: #d01181;
 }
 .portfolio_projects__projects-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);

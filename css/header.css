@@ -24,6 +24,7 @@ header .header_container {
           align-items: center;
 }
 header .header_container .header__logo {
+  display: block;
   position: relative;
   width: 10.416666vw;
 }
