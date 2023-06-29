@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // spaceBetween: width > 768 ? 50 : 10,
       centeredSlides: false,
       loop: true,
+      loopedSlides: 3,
       effect: 'creative',
       creativeEffect: {
         next: {

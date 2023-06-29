@@ -89,8 +89,7 @@
         font-size: 1.25vw;
         font-weight: 700;
         line-height: 1.3;
-        &::after {
-          content: '10';
+        &-year {
           position: absolute;
           top: 0;
           left: 0;
@@ -158,11 +157,12 @@
         height: 0;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         overflow: hidden;
         color: #fff;
         transition: all 0.4s ease-in-out;
         &-btn {
+          align-self: flex-end;
           position: relative;
           width: fit-content;
           padding: 1rem 0rem;
@@ -473,8 +473,7 @@
           position: relative;
           width: 51.73333vw;
           font-size: 4.8vw;
-          &::after {
-            content: '10';
+          &-yearr {
             font-size: 41.25vw;
             animation: 1.5s animNumbMob;
           }

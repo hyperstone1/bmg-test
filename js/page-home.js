@@ -17,13 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const navigationArrowNext = document.querySelector('.swiper-slider .swiper-button-next');
     const navigationArrowPrev = document.querySelector('.swiper-slider .swiper-button-prev');
 
-    const sliderNews = new Swiper('.news__list', {
-      freeMode: true,
+    const sliderNews = new Swiper('.last_news__list', {
       slidesPerView: 'auto',
       spaceBetween: width > 768 ? 50 : 10,
       navigation: {
-        nextEl: '.news_summary__projects-next',
-        prevEl: '.news_summary__projects-prev',
+        nextEl: '.last_news__navigation-next',
+        prevEl: '.last_news__navigation-prev',
       },
     });
     if (galleryTop) {
@@ -157,9 +156,30 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       });
       galleryTop.on('realIndexChange', function () {
-        console.log(this.activeIndex);
         const thumbsItems = document.querySelectorAll('.projects_slider__thumbs-item');
-        projectsThumbs.appendChild(thumbsItems[0]);
+        console.log(this.activeIndex);
+        thumbsItems.forEach((thumb, id) => {
+          if (id === 1) {
+            thumb.classList.add('anim1');
+          }
+          if (id === 2) {
+            thumb.classList.add('anim2');
+          }
+          if (id === 3) {
+            thumb.classList.add('anim3');
+          }
+        });
+        setTimeout(() => {
+          projectsThumbs.appendChild(thumbsItems[0]);
+          thumbsItems.forEach((thumb, id) => {
+            //поправить нужно
+            if (thumb.classList.contains('anim')) {
+              thumb.classList.remove('anim1');
+              thumb.classList.remove('anim2');
+              thumb.classList.remove('anim3');
+            }
+          });
+        }, 500);
       });
     }
   }

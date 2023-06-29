@@ -116,8 +116,7 @@
   font-weight: 700;
   line-height: 1.3;
 }
-.portfolio_main__info_advantage::after {
-  content: "10";
+.portfolio_main__info_advantage-year {
   position: absolute;
   top: 0;
   left: 0;
@@ -200,15 +199,17 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   overflow: hidden;
   color: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 .portfolio_projects__filter_all-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -572,8 +573,7 @@
     width: 51.73333vw;
     font-size: 4.8vw;
   }
-  .portfolio_main__info_advantage::after {
-    content: "10";
+  .portfolio_main__info_advantage-yearr {
     font-size: 41.25vw;
     -webkit-animation: 1.5s animNumbMob;
             animation: 1.5s animNumbMob;
