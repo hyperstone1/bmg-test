@@ -173,9 +173,13 @@ document.addEventListener('DOMContentLoaded', function () {
           projectsThumbs.appendChild(thumbsItems[0]);
           thumbsItems.forEach((thumb, id) => {
             //поправить нужно
-            if (thumb.classList.contains('anim')) {
+            if (id === 1) {
               thumb.classList.remove('anim1');
+            }
+            if (id === 2) {
               thumb.classList.remove('anim2');
+            }
+            if (id === 3) {
               thumb.classList.remove('anim3');
             }
           });

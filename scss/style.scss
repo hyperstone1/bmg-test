@@ -215,18 +215,151 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  &--text {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-  }
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.78125vw;
   &--icon {
+    position: relative;
     display: flex;
     align-items: center;
     width: 2.8rem;
+    height: 1.5rem;
     svg {
+      width: 2.8rem;
+      height: 1.5rem;
+      // width: 100%;
+      // height: 100%;
+    }
+  }
+
+  &-container {
+    position: relative;
+    width: fit-content;
+  }
+  &-hover_container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1.2;
+    z-index: 3;
+    font-size: 0.78125vw;
+    opacity: 0;
+    color: rgba(208, 17, 129, 1);
+  }
+  &-text_container {
+    display: flex;
+    justify-content: end;
+    right: 0;
+    width: 100%;
+    line-height: 1.2;
+    transition: color 0.9s ease;
+  }
+  &-text_container.complex_btn-text {
+    // color: rgba(208, 17, 129, 1);
+  }
+  &-hover_container.complex_btn-text {
+    color: rgba(208, 17, 129, 1);
+  }
+  .arrow_next-text_container {
+    display: flex;
+    justify-content: end;
+    right: 0;
+    width: 100%;
+    height: -webkit-fill-available;
+    transition: color 0.9s ease;
+    svg path {
+      // width: 2.449rem;
+      // height: 1.295rem;
+      // stroke: rgba(208, 17, 129, 1);
+      fill: rgba(208, 17, 129, 1);
+      // clip-path: inset(0 0 0 0);
+    }
+  }
+  .arrow_next-hover_container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1.2;
+    z-index: 3;
+    font-size: 0.78125vw;
+    opacity: 0;
+    height: -webkit-fill-available;
+    svg path {
+      // stroke: #000;
+      fill: #000;
+      // clip-path: inset(0 0 0 0);
+    }
+  }
+  .text-hover {
+    font-weight: 600;
+    color: rgba(208, 17, 129, 1);
+  }
+  &:hover {
+    .btn-show_more-text_container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0%;
+      opacity: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: width 0.9s ease, opacity 0.9s ease;
+    }
+    .btn-show_more-hover_container {
+      position: relative;
+      opacity: 1;
+      width: 100%;
+      transition: width 1s ease;
+    }
+    // .arrow_next-text_container {
+    //   position: absolute;
+    //   bottom: 0;
+    //   right: 0;
+    //   width: 0%;
+    //   // opacity: 0;
+    //   overflow: hidden;
+    //   white-space: nowrap;
+    //   transition: width 7.9s ease, opacity 0.9s ease;
+    // }
+    // .arrow_next-hover_container {
+    //   position: relative;
+    //   opacity: 1;
+    //   width: 100%;
+    //   transition: width 1s ease;
+    // }
+
+    .btn-show_more--icon .arrow_fill-next {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      svg {
+        fill: white;
+      }
+      svg path {
+        // stroke: #fff;
+        fill: #fff;
+        clip-path: inset(0 0 0 0);
+      }
+    }
+    .btn-show_more--icon .banner-arrow {
+      svg {
+        fill: rgb(0, 0, 0);
+      }
+      svg path {
+        // stroke: rgba(208, 17, 129, 1);
+        fill: rgb(0, 0, 0);
+        clip-path: inset(0 0 0 0);
+      }
     }
   }
 }
@@ -366,6 +499,8 @@ body {
   }
 }
 .arrow_fill-prev {
+  display: flex;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -384,6 +519,8 @@ body {
   }
 }
 .arrow_fill-next {
+  display: flex;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -397,7 +534,7 @@ body {
     width: 100%;
     height: 100%;
     fill: #d01181;
-    transition: clip-path 0.5s ease;
+    transition: clip-path 0.9s ease;
     clip-path: inset(0 100% 0 0);
   }
 }
@@ -505,6 +642,7 @@ body {
   .btn-show_more {
     display: flex;
     gap: 1.5rem;
+
     &--text {
       font-size: 2.8rem;
     }

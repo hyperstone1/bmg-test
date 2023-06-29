@@ -3,6 +3,7 @@ var swiper = new Swiper('.swiper-container', {
   grabCursor: true,
   centeredSlides: true,
   loop: true,
+  loopedSlides: 2,
   slidesPerView: 'auto',
   spaceBetween: 20,
   coverflowEffect: {
