@@ -162,10 +162,16 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(thumbsItems[0].querySelector('img').src);
 
         let containerImg = document.createElement('div');
+        let newText = document.createElement('div');
+        newText.className = 'projects_slider__thumbs-item_title';
+        newText.textContent = thumbsItems[0].querySelector(
+          '.projects_slider__thumbs-item_title',
+        ).textContent;
         let newImg = document.createElement('img');
         newImg.src = thumbsItems[0].querySelector('img').src;
         containerImg.className = 'projects_slider__thumbs-item last';
         containerImg.appendChild(newImg);
+        containerImg.appendChild(newText);
         projectsThumbs.appendChild(containerImg);
         const navArrow = document.querySelector('.swiper-button-next');
         navArrow.style.pointerEvents = 'none';

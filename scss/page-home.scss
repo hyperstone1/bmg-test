@@ -391,16 +391,32 @@
       height: 100%;
       &-item {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         filter: brightness(0.5);
+        gap: 2rem;
+        color: white;
+        &_title {
+          display: flex;
+          position: relative;
+          font-size: 2.2rem;
+          font-weight: 600;
+          align-self: flex-start;
+          margin-left: 4rem;
+        }
         &:first-child {
           position: absolute;
           right: -96.5rem;
           width: 84.7rem;
           height: 81.8rem;
+
           img {
             width: 100%;
             height: 100%;
           }
+          // .projects_slider__thumbs-item_title {
+          //   margin-left: -2rem;
+          // }
         }
         &:nth-child(2) {
           position: absolute;
@@ -412,6 +428,9 @@
             width: 100%;
             height: 100%;
           }
+          // .projects_slider__thumbs-item_title {
+          //   margin-right: 10rem;
+          // }
         }
         &:nth-child(3) {
           position: absolute;
@@ -422,6 +441,15 @@
             width: 100%;
             height: 100%;
           }
+          // .projects_slider__thumbs-item_title {
+          //   align-self: flex-end;
+          //   margin-right: 4rem;
+          // }
+        }
+        &:nth-child(4) {
+          // .projects_slider__thumbs-item_title {
+          //   align-self: flex-start;
+          // }
         }
         &.last {
           position: absolute;
