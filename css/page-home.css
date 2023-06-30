@@ -1192,7 +1192,7 @@
   }
   .last_news__list-item_container {
     height: 43.2rem;
-    padding: 2rem 2rem 4.6rem 2rem;
+    padding: 0;
   }
   .last_news__list-img {
     width: 100%;
@@ -1204,15 +1204,18 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%, 0 73%);
   }
   .last_news__list-title {
-    width: 51.2vw;
+    position: relative;
+    width: 100%;
+    padding: 2rem 2rem 0rem 2rem;
     font-size: 3.6rem;
     font-family: "akzidenz-grotesk";
     font-weight: 500;
-    height: 16rem;
+    max-height: 18rem;
     overflow: hidden;
   }
   .last_news__list-title::after {
-    bottom: 25.7rem;
+    bottom: 0;
+    left: 0;
   }
   .last_news__list_bottom {
     -webkit-box-orient: vertical;
@@ -1227,6 +1230,7 @@
             align-items: flex-start;
     text-align: left;
     gap: 2.2rem;
+    padding: 0rem 2rem 4.6rem 2rem;
   }
   .last_news__list_bottom-gradient {
     width: 158%;
