@@ -1204,7 +1204,6 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%, 0 73%);
   }
   .last_news__list-title {
-    position: relative;
     width: 100%;
     padding: 2rem 2rem 0rem 2rem;
     font-size: 3.6rem;
@@ -1214,7 +1213,7 @@
     overflow: hidden;
   }
   .last_news__list-title::after {
-    bottom: 0;
+    bottom: 30.9rem;
     left: 0;
   }
   .last_news__list_bottom {

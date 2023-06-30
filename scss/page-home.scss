@@ -1005,7 +1005,7 @@
       }
       &-title {
         // width: 51.2vw;
-        position: relative;
+        // position: relative;
         width: 100%;
         padding: 2rem 2rem 0rem 2rem;
         font-size: 3.6rem;
@@ -1014,8 +1014,8 @@
         max-height: 18rem;
         overflow: hidden;
         &::after {
-          // bottom: 25.7rem;
-          bottom: 0;
+          bottom: 30.9rem;
+          // bottom: 0;
           left: 0;
         }
       }
