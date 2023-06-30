@@ -154,10 +154,21 @@ document.addEventListener('DOMContentLoaded', function () {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        allowTouchMove: false,
       });
       galleryTop.on('realIndexChange', function () {
         const thumbsItems = document.querySelectorAll('.projects_slider__thumbs-item');
         console.log(this.activeIndex);
+        console.log(thumbsItems[0].querySelector('img').src);
+
+        let containerImg = document.createElement('div');
+        let newImg = document.createElement('img');
+        newImg.src = thumbsItems[0].querySelector('img').src;
+        containerImg.className = 'projects_slider__thumbs-item last';
+        containerImg.appendChild(newImg);
+        projectsThumbs.appendChild(containerImg);
+        const navArrow = document.querySelector('.swiper-button-next');
+        navArrow.style.pointerEvents = 'none';
         thumbsItems.forEach((thumb, id) => {
           if (id === 1) {
             thumb.classList.add('anim1');
@@ -168,9 +179,15 @@ document.addEventListener('DOMContentLoaded', function () {
           if (id === 3) {
             thumb.classList.add('anim3');
           }
+          if (id === 4) {
+            thumb.classList.add('last');
+          }
         });
         setTimeout(() => {
+          projectsThumbs.removeChild(containerImg);
           projectsThumbs.appendChild(thumbsItems[0]);
+          // projectsThumbs.appendChild(thumbsItems[0]);
+
           thumbsItems.forEach((thumb, id) => {
             //поправить нужно
             if (id === 1) {
@@ -182,7 +199,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (id === 3) {
               thumb.classList.remove('anim3');
             }
+            if (id === 4) {
+              thumb.classList.remove('last');
+            }
           });
+          navArrow.style.pointerEvents = 'auto';
         }, 500);
       });
     }
@@ -234,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       sliderServices = new Swiper('.services_list-wrapper', {
-        // Исправили селектор на '.swiper-container'
         slidesPerView: 'auto',
         centeredSlides: false,
         spaceBetween: 10,

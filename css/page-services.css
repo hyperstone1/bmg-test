@@ -590,6 +590,9 @@
 }
 
 @media (max-width: 48em) {
+  .services_summary__btn-hover_container {
+    display: none;
+  }
   .services {
     padding-top: 28.8rem;
   }
@@ -723,8 +726,28 @@
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
+  .services_summary__btn .services_summary__btn-hover_container {
+    display: none;
+  }
+  .services_summary__btn .btn-about .arrow_fill-next {
+    display: none;
+  }
+  .services_summary__btn .btn-about .arrow_fill-next {
+    display: none;
+  }
   .services_summary__btn .btn-about {
     display: none;
+  }
+  .services_summary__btn:hover .services_summary__btn-text_container {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 1;
+    overflow: initial;
+    white-space: nowrap;
+    -webkit-transition: all 0s ease;
+    transition: all 0s ease;
   }
   .services_summary__btn-text {
     position: relative;

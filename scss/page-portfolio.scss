@@ -419,9 +419,12 @@
       font-size: 3.0666vw;
     }
   }
-  .btn-show_more--text {
-    display: none;
+  .portfolio_projects__projects-category {
+    .btn-show_more--text {
+      display: none;
+    }
   }
+
   .portfolio {
     padding-top: 28rem;
     &_main {

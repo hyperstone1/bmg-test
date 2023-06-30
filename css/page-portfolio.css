@@ -517,7 +517,7 @@
   .portfolio_projects__filter_all .portfolio_projects__filter-category {
     font-size: 3.0666vw;
   }
-  .btn-show_more--text {
+  .portfolio_projects__projects-category .btn-show_more--text {
     display: none;
   }
   .portfolio {

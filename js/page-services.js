@@ -1,6 +1,5 @@
 var swiper = new Swiper('.swiper-container', {
   effect: 'coverflow',
-  grabCursor: true,
   centeredSlides: true,
   loop: true,
   loopedSlides: 2,
@@ -19,6 +18,7 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.slider-prev',
     nextEl: '.slider-next',
   },
+  allowTouchMove: false,
 });
 
 function handleResize() {

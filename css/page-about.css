@@ -400,10 +400,27 @@
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  .about_aim__btn-text {
+  .about_aim__btn .btn-show_more .btn-show_more-hover_container {
+    display: none;
+  }
+  .about_aim__btn .btn-show_more:hover .btn-show_more-text_container {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 1;
+    overflow: initial;
+    white-space: nowrap;
+    -webkit-transition: all 0s;
+    transition: all 0s;
+  }
+  .about_aim__btn .btn-show_more--text {
     color: #d01181;
     font-weight: 600;
     font-size: 2.9333vw;
+  }
+  .about_aim__btn .btn-show_more--icon {
+    display: none;
   }
   .about_aim__btn .btn-about {
     display: none;

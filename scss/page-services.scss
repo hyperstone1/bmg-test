@@ -500,6 +500,9 @@
 }
 
 @media (max-width: 48em) {
+  .services_summary__btn-hover_container {
+    display: none;
+  }
   .services {
     padding-top: 28.8rem;
     // .swiper-slide {
@@ -620,9 +623,31 @@
         padding-top: 0rem;
         background: rgba(255, 255, 255, 0.7);
         border: 1px solid rgba(255, 255, 255, 0.2);
+        .services_summary__btn-hover_container {
+          display: none;
+        }
+        .btn-about .arrow_fill-next {
+          display: none;
+        }
+        .btn-about .arrow_fill-next {
+          display: none;
+        }
         .btn-about {
           display: none;
         }
+        &:hover {
+          .services_summary__btn-text_container {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            opacity: 1;
+            overflow: initial;
+            white-space: nowrap;
+            transition: all 0s ease;
+          }
+        }
+
         &-text {
           position: relative;
           font-weight: 600;
