@@ -493,7 +493,7 @@ header .header__logo svg {
             order: 3;
     display: block;
     width: 100%;
-    height: -webkit-fill-available;
+    height: 100%;
   }
   header .menu-column.active .mobile-nav {
     gap: 6rem;
