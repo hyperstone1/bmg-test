@@ -273,6 +273,7 @@ header {
 @media (max-width: 48em) {
   header.opened {
     padding-top: 0;
+    height: 100%;
   }
   header {
     // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -280,7 +281,7 @@ header {
     .header_container.opened {
       padding: 3rem 2rem;
       padding-bottom: 10rem;
-      height: 100vh;
+      height: 100%;
       background-color: #101010;
       justify-content: start;
       .mobile-nav-gradient {

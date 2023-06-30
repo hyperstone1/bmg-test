@@ -448,6 +448,7 @@ header .header__logo svg {
 @media (max-width: 48em) {
   header.opened {
     padding-top: 0;
+    height: 100%;
   }
   header {
     padding-bottom: 0rem;
@@ -455,7 +456,7 @@ header .header__logo svg {
   header .header_container.opened {
     padding: 3rem 2rem;
     padding-bottom: 10rem;
-    height: 100vh;
+    height: 100%;
     background-color: #101010;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
