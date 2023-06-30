@@ -71,6 +71,7 @@
           font-weight: 500;
           font-size: 1.25vw;
           color: #ffffff;
+          margin-right: 1rem;
         }
         &-img {
           width: 16.458333vw;
@@ -425,6 +426,7 @@
           align-items: start;
           gap: 4rem;
           &-title {
+            margin-right: 0;
             font-size: 4.8vw;
           }
           &-img {

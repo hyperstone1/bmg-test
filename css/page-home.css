@@ -601,7 +601,7 @@
   left: 6.7rem;
   font-weight: 600;
   font-size: 1.5625vw;
-  line-height: 140%;
+  line-height: 1.4;
   color: #f9fbfe;
 }
 
@@ -622,7 +622,7 @@
 .slide_item-name {
   font-weight: 700;
   font-size: 1.25vw;
-  line-height: 140%;
+  line-height: 1.4;
   padding: 7.7rem 4.2rem 9.4rem 5rem;
 }
 .slide_item__square {
@@ -631,7 +631,7 @@
 .slide_item .square_name {
   font-weight: 500;
   font-size: 0.9375vw;
-  line-height: 150%;
+  line-height: 1.5;
 }
 .slide_item .square__numb {
   font-weight: 700;
@@ -643,7 +643,7 @@
   padding: 2rem 4.2rem;
   font-weight: 500;
   font-size: 0.9375vw;
-  line-height: 150%;
+  line-height: 1.5;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 22.6041666vw;
           flex: 1 0 22.6041666vw;
@@ -732,7 +732,7 @@
   overflow: hidden;
   cursor: pointer;
 }
-.last_news__list-item:hover .news__list_bottom-gradient {
+.last_news__list-item:hover .last_news__list_bottom-gradient {
   width: 220%;
   height: 150%;
   left: -62rem;
@@ -1036,6 +1036,7 @@
   }
   .complex .advantages__list__item .item-title {
     font-size: 4.8vw;
+    line-height: 1.2;
   }
   .complex .advantages__list__item .item-subscription {
     font-size: 3.73333vw;
@@ -1161,7 +1162,7 @@
     width: 54.2rem;
     height: 83.8rem;
   }
-  .last_news__list-item:hover .news__list_bottom-gradient {
+  .last_news__list-item:hover .last_news__list_bottom-gradient {
     width: 158%;
     height: 116%;
     left: 0;

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuColumn = document.querySelector('.menu-column');
   const menu = document.querySelector('.mobile-nav');
   const lang = document.querySelectorAll('.lang');
+  const headerContainer = document.querySelector('.header_container');
 
   burgerCheckbox.addEventListener('click', function () {
     if (
@@ -13,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // if (!header.classList.contains('sticky')) {
       //   header.classList.add('sticky');
       // }
-
+      header.classList.add('opened');
+      headerContainer.classList.add('opened');
       menuColumn.classList.add('slide-in');
       menuColumn.classList.add('active');
       burgerCheckbox.classList.add('active');
@@ -31,15 +33,17 @@ document.addEventListener('DOMContentLoaded', function () {
       // }, 1000);
     } else {
       // header.classList.remove('sticky');
+      headerContainer.classList.remove('opened');
+      header.classList.remove('opened');
 
       burgerCheckbox.classList.remove('active');
       burgerCheckbox.classList.add('not-active');
       burgerCheckbox.style.pointerEvents = 'none';
+      menuColumn.classList.remove('active');
 
-      menuColumn.classList.add('slide-out');
+      // menuColumn.classList.add('slide-out');
       setTimeout(() => {
-        menuColumn.classList.remove('active');
-        menuColumn.classList.remove('slide-out');
+        // menuColumn.classList.remove('slide-out');
         burgerCheckbox.style.pointerEvents = 'auto';
       }, 290);
     }

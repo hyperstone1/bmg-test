@@ -10,6 +10,7 @@ var swiper = new Swiper('.swiper-container', {
     stretch: -20,
     depth: 50,
     modifier: 1,
+    slideShadows: false,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -33,17 +34,51 @@ function handleResize() {
       const listProjectsText = btn.closest('.services_list__projects_text');
       listProjectsText.appendChild(btn);
     });
-    swiper.passedParams.slidesPerView = 'auto';
-    swiper.params.slidesPerView = 'auto';
-    swiper.params.centeredSlides = false;
-    swiper.params.spaceBetween = 20;
-    console.log(swiper.params.slidesPerView);
+    swiper.destroy();
+    swiper = new Swiper('.swiper-container', {
+      centeredSlides: false,
+      spaceBetween: 20,
+      loop: true,
+      slidesPerView: 'auto',
+      allowTouchMove: true,
+    });
+    // swiper.passedParams.slidesPerView = 'auto';
+    // swiper.params.slidesPerView = 'auto';
+    // swiper.params.centeredSlides = false;
+    // swiper.params.spaceBetween = 20;
+    // swiper.allowTouchMove = true;
+    // swiper.params.effect = 'slide';
+    // swiper.params.coverflowEffect = undefined;
+
+    console.log(swiper.params.allowTouchMove);
     // swiper.slides.css({ width: 'auto' });
-    setTimeout(function () {
-      swiper.update(); // Обновляем Swiper после изменения параметров
-    }, 0);
+    swiper.update(); // Обновляем Swiper после изменения параметров
     console.log(swiper);
   } else {
+    swiper.destroy();
+    swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 2,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      coverflowEffect: {
+        rotate: 30,
+        stretch: -20,
+        depth: 50,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        prevEl: '.slider-prev',
+        nextEl: '.slider-next',
+      },
+      allowTouchMove: false,
+    });
     projectsTitle.appendChild(btnShow);
   }
 }

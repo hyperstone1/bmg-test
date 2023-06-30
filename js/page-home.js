@@ -249,12 +249,12 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       });
 
-      const services = document.querySelectorAll('.services_list-service');
+      const services = document.querySelectorAll('.benefits_services_list-service');
       services.forEach((service) => {
         service.classList.add('swiper-slide');
       });
 
-      sliderServices = new Swiper('.services_list-wrapper', {
+      sliderServices = new Swiper('.benefits_services_list-wrapper', {
         slidesPerView: 'auto',
         centeredSlides: false,
         spaceBetween: 10,

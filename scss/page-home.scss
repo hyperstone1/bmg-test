@@ -462,7 +462,7 @@
   left: 6.7rem;
   font-weight: 600;
   font-size: 1.5625vw;
-  line-height: 140%;
+  line-height: 1.4;
   color: #f9fbfe;
 }
 .slide_item {
@@ -477,7 +477,7 @@
   &-name {
     font-weight: 700;
     font-size: 1.25vw;
-    line-height: 140%;
+    line-height: 1.4;
     padding: 7.7rem 4.2rem 9.4rem 5rem;
   }
   &__square {
@@ -486,7 +486,7 @@
   .square_name {
     font-weight: 500;
     font-size: 0.9375vw;
-    line-height: 150%;
+    line-height: 1.5;
   }
   .square__numb {
     font-weight: 700;
@@ -498,7 +498,7 @@
     padding: 2rem 4.2rem;
     font-weight: 500;
     font-size: 0.9375vw;
-    line-height: 150%;
+    line-height: 1.5;
     flex: 1 0 22.6041666vw;
     color: #101010;
   }
@@ -573,7 +573,7 @@
       overflow: hidden;
       cursor: pointer;
       &:hover {
-        .news__list_bottom-gradient {
+        .last_news__list_bottom-gradient {
           width: 220%;
           height: 150%;
           left: -62rem;
@@ -841,6 +841,7 @@
       padding: 3rem 6rem 8rem 4rem;
       .item-title {
         font-size: 4.8vw;
+        line-height: 1.2;
       }
       .item-subscription {
         font-size: 3.73333vw;
@@ -969,7 +970,7 @@
         width: 54.2rem;
         height: 83.8rem;
         &:hover {
-          .news__list_bottom-gradient {
+          .last_news__list_bottom-gradient {
             width: 158%;
             height: 116%;
             left: 0;

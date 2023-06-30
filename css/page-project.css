@@ -140,6 +140,7 @@
   width: 24.9479166667vw;
 }
 .project_details__other_project-list {
+  padding-top: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,9 +148,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3.4rem;
 }
 .project_details__other_project-item {
+  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -158,14 +159,33 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.4rem;
-  padding-bottom: 3.4rem;
+  padding-top: 3.4rem;
+  padding-bottom: 8.3rem;
   border-bottom: 1px solid #a1acb9;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.project_details__other_project-item:hover .project_details__other_project-chapter {
+  margin-left: 2rem;
+}
+.project_details__other_project-item:hover .project_details__other_project-title {
+  margin-left: 2rem;
+}
+.project_details__other_project-item:hover .project_details__other_project-text {
+  margin-left: 2rem;
+  color: #ffffff;
+}
+.project_details__other_project-item:hover .project_details__other_project-gradient {
+  opacity: 1;
 }
 .project_details__other_project-chapter {
   font-weight: 500;
   font-size: 0.78125vw;
   line-height: 1.4;
   color: #d01181;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .project_details__other_project-title {
   font-family: "akzidenz-grotesk";
@@ -174,12 +194,30 @@
   font-size: 1.25vw;
   line-height: 1.2;
   color: #ffffff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .project_details__other_project-text {
   font-weight: 500;
   font-size: 0.78125vw;
   line-height: 1.4;
   color: #a1acb9;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.project_details__other_project-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  z-index: -1;
+}
+.project_details__other_project-gradient img {
+  height: 100%;
 }
 
 @media (max-width: 48em) {
@@ -245,6 +283,7 @@
     margin-top: 18rem;
   }
   .project_details__other_project-list {
+    padding-top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
