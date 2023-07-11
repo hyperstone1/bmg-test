@@ -276,6 +276,7 @@
         display: flex;
         flex-direction: column;
         cursor: pointer;
+        animation: appearance 0.7s ease-in-out;
         &:hover {
           .portfolio_projects__projects_text-title {
             color: #d01181;

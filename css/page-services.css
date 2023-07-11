@@ -374,6 +374,18 @@
   row-gap: 5.4rem;
   color: #ffffff;
 }
+.services_list__projects-link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .services_list__projects-img {
   height: 21.875vw;
 }
@@ -391,6 +403,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   cursor: pointer;
+  -webkit-animation: appearance 0.7s ease-in-out;
+          animation: appearance 0.7s ease-in-out;
 }
 .services_list__projects-item:hover .services_list__projects_text-gradient {
   opacity: 1;

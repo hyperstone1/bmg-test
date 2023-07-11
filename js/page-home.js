@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Если навигационной панели нету, создаем ее и стрелки для разрешения экрана меньше 768
       if (navigation === null) {
-        const swiperContainer = document.querySelector('.swiper-container');
+        const swiperContainer = document.querySelector('.swiper-slider');
         const sliderBtnNext = document.querySelector('.swiper-button-next');
         const sliderBtnPrev = document.querySelector('.swiper-button-prev');
         //Если присутствуют старые стрелки из разрешения экрана больше 768 - удаляем их
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       // Если присутствует навигационная панель для резрешения меньш 768 - удаляем ее
       if (navigation !== null) {
-        let swiperContainer = document.querySelector('.swiper-container');
+        let swiperContainer = document.querySelector('.swiper-slider');
         swiperContainer.removeChild(navigation);
       }
 

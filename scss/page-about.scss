@@ -292,27 +292,15 @@
         padding-top: 0rem;
         background: rgba(255, 255, 255, 0.7);
         border: 1px solid rgba(255, 255, 255, 0.2);
-        .btn-show_more {
-          .btn-show_more-hover_container {
-            display: none;
-          }
-          &:hover {
-            .btn-show_more-text_container {
-              position: relative;
-              bottom: 0;
-              right: 0;
-              width: 100%;
-              opacity: 1;
-              overflow: initial;
-              white-space: nowrap;
-              transition: all 0s;
-            }
-          }
+        .btn-show_more--icon {
+          display: none;
+        }
+        .btn-show_more-hover_container {
+          display: none;
         }
         .btn-show_more--text {
           color: #d01181;
           font-weight: 600;
-          font-size: 2.9333vw;
         }
         .btn-show_more--icon {
           display: none;

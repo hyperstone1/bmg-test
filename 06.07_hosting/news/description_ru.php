@@ -1,0 +1,14 @@
+<?php
+$lang["TITLE1"] = "Будь в курсе";
+$lang["TITLE2"] = "Последние новости";
+$lang["TITLE_NAME"] = "TITLE_NAME";
+$lang["TITLE_DESCRIPTION"] = "TITLE_DESCRIPTION";
+$lang["NAME_NEWS"] = "NAME";
+$lang["CATEGORY"] = "PROPERTY_CATEGORY_VALUE";
+$lang["PROJECTS_TITLE"] = "Проекты";
+$lang["NAME_PROJECT"] = "NAME";
+$lang["PROJECTS_DESCRIPTION_SMALL"] = "PROPERTY_SMALL_TEXT_CARD_VALUE";
+$lang["NEWS_COMPANY_TITLE"] = "Новости компании";
+$lang["FULL_NEWS_NAME"] = "PROPERTY_FULL_NEWS_VALUE";
+$lang["NEWS_DESCRIPTION_DETAIL"] = "PREVIEW_TEXT";
+$lang["NEWS_DESCRIPTION_SMALL"] = "PROPERTY_SMALL_TEXT_CARD_VALUE";

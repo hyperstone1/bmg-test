@@ -973,7 +973,7 @@
       }
     }
     &__navigation {
-      display: none;
+      display: none !important;
     }
     &__list {
       &-item {

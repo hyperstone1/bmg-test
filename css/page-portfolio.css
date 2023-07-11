@@ -355,6 +355,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   cursor: pointer;
+  -webkit-animation: appearance 0.7s ease-in-out;
+          animation: appearance 0.7s ease-in-out;
 }
 .portfolio_projects__projects-item:hover .portfolio_projects__projects_text-title {
   color: #d01181;

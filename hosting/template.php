@@ -30,7 +30,7 @@ $this->setFrameMode(true);
             <div class="last_news__list_bottom">
                 <div class="last_news__list_bottom-chapter">NEWS</div>
                 <div class="last_news__list_bottom-text">
-                    <?=$arItem["PREVIEW_TEXT"];?>
+                    <?=$arItem["PROPERTIES"]["SMALL_TEXT_CARD"]["VALUE"];?>
                 </div>
                 <div class="last_news__list_bottom-gradient">
                     <img src="/bitrix/templates/bmg//images/home/gradient-news.webp" alt="" />

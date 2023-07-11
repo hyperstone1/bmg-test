@@ -2,13 +2,32 @@ const width = window.screen.width;
 ymaps.ready(function () {
   const contacts = document.querySelector('.contacts');
 
-  var myMap = new ymaps.Map('map', {
-      center: [55.840245, 37.492024],
-      zoom: 14,
-      controls: [],
-      hideFooter: true,
-      behaviors: ['default'],
-    }),
+  var myMap = new ymaps.Map(
+      'map',
+      {
+        center: [55.840245, 37.492024],
+        zoom: 14,
+        controls: [],
+        hideFooter: true,
+        behaviors: ['default'],
+      },
+      {
+        suppressMapOpenBlock: true,
+        suppressObsoleteBrowserNotifier: true,
+        suppressMapOpenBlock: true,
+        suppressObsoleteBrowserNotifier: true,
+        yandexMapAutoSwitch: false,
+        yandexMapDisablePoiInteractivity: true,
+        yandexMapDisableAutoFocus: true,
+        yandexMapStaticImg: false,
+        yandexMapDisableHotkeys: true,
+        yandexMapDisableMultiTouch: true,
+        yandexMapDisableZoom: true,
+        yandexMapDisableDoubleClickZoom: true,
+        yandexMapDisableScrollZoom: true,
+        yandexMapDisableRightMouseButtonMagnifier: true,
+      },
+    ),
     myPlacemark1 = new ymaps.Placemark(
       [55.840245, 37.492024],
       {},

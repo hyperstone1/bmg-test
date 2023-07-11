@@ -1,14 +1,23 @@
-var swiper = new Swiper('.swiper-container', {
+const rem = function (rem) {
+  if (window.innerWidth > 768) {
+    return 0.005208335 * window.innerWidth * rem;
+  } else {
+    // где 375 это ширина моб версии макета
+    return (100 / 375) * (0.1 * window.innerWidth) * rem;
+  }
+};
+
+var swiper = new Swiper('.services_summary__info-slider', {
   effect: 'coverflow',
   centeredSlides: true,
   loop: true,
   loopedSlides: 2,
   slidesPerView: 'auto',
-  spaceBetween: 20,
+  spaceBetween: rem(2),
   coverflowEffect: {
     rotate: 30,
     stretch: -20,
-    depth: 50,
+    depth: -50,
     modifier: 1,
     slideShadows: false,
   },
@@ -35,9 +44,9 @@ function handleResize() {
       listProjectsText.appendChild(btn);
     });
     swiper.destroy();
-    swiper = new Swiper('.swiper-container', {
+    swiper = new Swiper('.services_summary__info-slider', {
       centeredSlides: false,
-      spaceBetween: 20,
+      spaceBetween: rem(2),
       loop: true,
       slidesPerView: 'auto',
       allowTouchMove: true,
@@ -56,7 +65,7 @@ function handleResize() {
     console.log(swiper);
   } else {
     swiper.destroy();
-    swiper = new Swiper('.swiper-container', {
+    swiper = new Swiper('.services_summary__info-slider', {
       effect: 'coverflow',
       centeredSlides: true,
       loop: true,

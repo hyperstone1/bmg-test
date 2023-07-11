@@ -1,8 +1,8 @@
 var swiper = new Swiper('.services_summary__info-slider', {
   effect: 'coverflow',
-  grabCursor: true,
   centeredSlides: true,
   loop: true,
+  loopedSlides: 2,
   slidesPerView: 'auto',
   spaceBetween: 20,
   coverflowEffect: {
@@ -10,12 +10,18 @@ var swiper = new Swiper('.services_summary__info-slider', {
     stretch: -20,
     depth: 50,
     modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
   },
   navigation: {
     prevEl: '.slider-prev',
     nextEl: '.slider-next',
   },
+  allowTouchMove: false,
 });
+
 function handleResize() {
   const width = window.innerWidth;
   const btnShow = document.querySelectorAll('.services_list__projects_text-btn');
@@ -28,42 +34,54 @@ function handleResize() {
       const listProjectsText = btn.closest('.services_list__projects_text');
       listProjectsText.appendChild(btn);
     });
-    swiper.passedParams.slidesPerView = 'auto';
-    swiper.params.slidesPerView = 'auto';
-    swiper.params.centeredSlides = false;
-    swiper.params.spaceBetween = 20;
-    console.log(swiper.params.slidesPerView);
+    swiper.destroy();
+    swiper = new Swiper('.services_summary__info-slider', {
+      centeredSlides: false,
+      spaceBetween: 20,
+      loop: true,
+      slidesPerView: 'auto',
+      allowTouchMove: true,
+    });
+    // swiper.passedParams.slidesPerView = 'auto';
+    // swiper.params.slidesPerView = 'auto';
+    // swiper.params.centeredSlides = false;
+    // swiper.params.spaceBetween = 20;
+    // swiper.allowTouchMove = true;
+    // swiper.params.effect = 'slide';
+    // swiper.params.coverflowEffect = undefined;
+
+    console.log(swiper.params.allowTouchMove);
     // swiper.slides.css({ width: 'auto' });
-    // setTimeout(function () {
-    //   swiper.update(); // Обновляем Swiper после изменения параметров
-    // }, 0);
+    swiper.update(); // Обновляем Swiper после изменения параметров
     console.log(swiper);
   } else {
+    swiper.destroy();
+    swiper = new Swiper('.services_summary__info-slider', {
+      effect: 'coverflow',
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 2,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      coverflowEffect: {
+        rotate: 30,
+        stretch: -20,
+        depth: 50,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        prevEl: '.slider-prev',
+        nextEl: '.slider-next',
+      },
+      allowTouchMove: false,
+    });
     projectsTitle.appendChild(btnShow);
   }
 }
 
 window.addEventListener('load', handleResize);
 window.addEventListener('resize', handleResize);
-
-function showServices() {
-  var targetContainer = $('.services_list__projects'),
-    url = $('.load-more-items-services').attr('data-url');
-
-  if (url !== undefined) {
-    $.ajax({
-      type: 'GET',
-      url: url,
-      dataType: 'html',
-      success: function (data) {
-        $('.load-more-items-services').remove();
-
-        var elements = $(data).find('.services_list__projects-item'),
-          pagination = $(data).find('.load-more-items-services');
-
-        targetContainer.append(elements);
-        $('#pag2').append(pagination);
-      },
-    });
-  }
-}

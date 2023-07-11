@@ -1175,7 +1175,7 @@
     line-height: 1.2;
   }
   .last_news__navigation {
-    display: none;
+    display: none !important;
   }
   .last_news__list-item {
     position: relative;

@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const rem = function (rem) {
+    if (window.innerWidth > 768) {
+      return 0.005208335 * window.innerWidth * rem;
+    } else {
+      // где 375 это ширина моб версии макета
+      return (100 / 375) * (0.1 * window.innerWidth) * rem;
+    }
+  };
   function handleResize() {
     const width = window.innerWidth;
     console.log(width);
@@ -9,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         direction: 'vertical',
         slidesPerView: 2,
         centeredSlides: false,
-        spaceBetween: 20,
+        spaceBetween: rem(2),
         loop: true,
         navigation: {
           nextEl: '.news_summary__projects-next',

@@ -2,11 +2,13 @@ const comment = document.querySelector('.brokeridge_summary__text-comment');
 const company = document.querySelector('.brokeridge_company');
 
 function smoothScroll() {
-  const offset = company.offsetTop - 50;
-  window.scrollTo({
-    top: offset,
-    behavior: 'smooth',
-  });
+  if (company) {
+    const offset = company.offsetTop - 50;
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth',
+    });
+  }
 }
 
 function handleResize() {
@@ -15,14 +17,14 @@ function handleResize() {
 
   if (width < 768) {
     const container = document.querySelector('.brokeridge_summary__text');
-    container.appendChild(btn);
+    container && container.appendChild(btn);
   } else {
     const brokeridgeList = document.querySelector('.brokeridge_company__brokeridge_list');
-    brokeridgeList.appendChild(btn);
+    brokeridgeList && brokeridgeList.appendChild(btn);
   }
 }
 
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', handleResize);
 
-comment.addEventListener('click', smoothScroll);
+comment && comment.addEventListener('click', smoothScroll);

@@ -230,6 +230,7 @@
 }
 .news_summary__projects-navigation svg {
   width: 2.34375vw;
+  height: 100%;
 }
 .news_summary__project_info {
   display: -webkit-box;
@@ -241,6 +242,7 @@
           flex-direction: column;
   width: 9.21875vw;
   gap: 1.8rem;
+  overflow: hidden;
 }
 .news_summary__project-img {
   width: 7.1354166vw;
@@ -356,6 +358,18 @@
   display: -ms-flexbox;
   display: flex;
   gap: 5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.news_company__news_list-img {
+  height: 56.2rem;
+  width: 100%;
+}
+.news_company__news_list-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .news_company__news_list-gradient {
   position: absolute;
@@ -380,7 +394,7 @@
   transition: top 1s ease, right 1s ease, filter 1s ease, transform 1s ease, -webkit-filter 1s ease, -webkit-transform 1s ease;
 }
 .news_company__news_list-item {
-  width: 43.59375vw;
+  width: 82.57rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,6 +405,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: appearance 0.7s ease-in-out;
+          animation: appearance 0.7s ease-in-out;
 }
 .news_company__news_list-item:hover .news_company__news_list-gradient img {
   -webkit-transform: rotate(20deg);
@@ -401,9 +417,12 @@
   right: -30rem;
 }
 .news_company__news_list_description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
   padding: 4rem;
-  margin-top: -5rem;
+  margin-top: -15rem;
   width: 39.4270833vw;
   background: #101010;
 }
@@ -442,9 +461,6 @@
 .container_svg {
   position: relative;
   width: 100%; /* Ширина иконки */
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content; /* Высота иконки */
 }
 .container_svg:nth-child(1):hover .arrow_fill-prev {
   position: absolute;
@@ -454,7 +470,6 @@
   height: 100%;
 }
 .container_svg:nth-child(1):hover .arrow_fill-prev svg path {
-  stroke: #d01181;
   -webkit-clip-path: inset(0 0 0 0);
           clip-path: inset(0 0 0 0);
 }
@@ -464,7 +479,6 @@
   left: 0;
 }
 .container_svg:nth-child(2):hover .arrow_fill-next svg path {
-  stroke: #d01181;
   -webkit-clip-path: inset(0 0 0 0);
           clip-path: inset(0 0 0 0);
 }
@@ -640,6 +654,9 @@
             flex-direction: column;
     gap: 8rem;
   }
+  .news_company__news_list-img {
+    height: 50rem;
+  }
   .news_company__news_list-item {
     width: 100%;
   }
@@ -665,7 +682,7 @@
   }
   .news_company__show_more-text {
     margin-bottom: 0;
-    width: 16vw;
+    width: 23vw;
     font-size: 2.9333vw;
   }
   .news_company__show_more-icon {
