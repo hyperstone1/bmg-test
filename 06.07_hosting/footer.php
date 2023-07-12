@@ -476,6 +476,7 @@ $arPropertiesFooter = $obFooter->GetProperties();
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="<?= SITE_TEMPLATE_PATH ?>/js/jq/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="<?= SITE_TEMPLATE_PATH ?>/js/page-home.js"></script>
     <script src="<?= SITE_TEMPLATE_PATH ?>/js/page-portfolio.js"></script>
     <script src="<?= SITE_TEMPLATE_PATH ?>/js/page-news.js"></script>

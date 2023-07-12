@@ -10,40 +10,41 @@
               src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ffac2b37-9f44-43d8-8e3e-92f15073c2d1"
               type="text/javascript"
       ></script>
-
-
+      
       <title><?= $APPLICATION->ShowTitle() ?></title>
 
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/_set.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/header.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/footer.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-home.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/slider.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/style.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-portfolio.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-news.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-contacts.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-about.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-services.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-project.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-news_details.css" />
-      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-brokeridge.css" />
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/_set.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/header.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/footer.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-home.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/slider.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/style.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-portfolio.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-news.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-contacts.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-about.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-services.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-project.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-news_details.css" />-->
+<!--      <link rel="stylesheet" href="/bitrix/templates/bmg/css/page-brokeridge.css" />-->
 
 
       <?php $APPLICATION->ShowHead();
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/_set.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/header.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/footer.css");
-//       $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/slider.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-home.css"); ///////
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/style.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-portfolio.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-news.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-contacts.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-about.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-services.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-news_details.css");
-//      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-project.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/_set.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/header.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/footer.css");
+       $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/slider.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-home.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/style.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-portfolio.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-news.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-contacts.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-about.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-services.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-project.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-news_details.css");
+      $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/page-brokeridge.css");
+
 
 
 
@@ -55,9 +56,11 @@
     if ($page[1] == "en") {
         $lang["HOME_LINK"] = "/en/";
         $lang["MENU"] = "top";
+        $lang["CITY"] = "Moscow";
     } else {
         $lang["HOME_LINK"] = "/";
         $lang["MENU"] = "left";
+        $lang["CITY"] = "Москва";
 
     }
 
@@ -469,7 +472,7 @@
                               stroke="white"
                       />
                   </svg>
-                  <div class="location__current">Москва</div>
+                  <div class="location__current"><?=$lang["CITY"];?></div>
               </div>
           </div>
 
