@@ -308,7 +308,7 @@
 }
 @keyframes third {
   0% {
-    width: 17.1875vw;
+    width: 15.20833vw;
     height: 20.272rem;
     top: 56rem;
   }
@@ -390,12 +390,14 @@
       width: 40.885416vw;
       height: 100%;
       &-item {
+        width: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         filter: brightness(0.5);
         gap: 2rem;
         color: white;
+        opacity: 0;
         &_title {
           display: flex;
           position: relative;
@@ -409,7 +411,7 @@
           right: -96.5rem;
           width: 84.7rem;
           height: 81.8rem;
-
+          opacity: 1;
           img {
             width: 100%;
             height: 100%;
@@ -423,6 +425,7 @@
           width: 100%;
           padding-bottom: 11.8rem;
           width: 49.3rem;
+          opacity: 1;
           img {
             width: 100%;
             height: 100%;
@@ -432,6 +435,7 @@
           position: absolute;
           width: 15.20833vw;
           top: 56rem;
+          opacity: 1;
           img {
             width: 100%;
             height: 100%;
@@ -911,6 +915,7 @@
         }
       }
       &_container {
+        flex-direction: column;
         padding-right: 0rem;
       }
       .swiper-container {

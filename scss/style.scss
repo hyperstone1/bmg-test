@@ -55,8 +55,9 @@
     opacity: 0;
   }
 }
-.modal.modal-closing {
-  animation: disappearance 0.6s ease-in-out;
+
+.request_form__form-inp:-webkit-autofill {
+  background-color: transparent !important;
 }
 body {
   // overflow: hidden;
@@ -65,17 +66,29 @@ body {
   border: 1px solid #cc2347;
 }
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 12321312;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
+  opacity: 0;
+}
+.modal.show {
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+  animation: appearance 0.6s ease-in-out;
+}
+.modal.modal-closing {
+  // animation: disappearance 0.6s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
 }
 .modal_container {
   position: relative;
@@ -86,7 +99,6 @@ body {
   justify-content: center;
   flex-direction: column;
   background: #222;
-
   gap: 4.8rem;
 }
 .modal-close {
@@ -95,6 +107,7 @@ body {
   right: 4rem;
   width: 2.4rem;
   height: 2.4rem;
+  cursor: pointer;
   svg {
     width: 2.4rem;
     height: 2.4rem;
@@ -244,45 +257,6 @@ body {
   width: 2.8rem;
   height: fit-content;
   cursor: pointer;
-  // background: #ffffff;
-  // border-radius: 50%;
-  // overflow: hidden;
-  // svg {
-  //   width: 1.145833vw;
-  //   height: 1.145833vw;
-  //   z-index: 2;
-  // }
-  // svg path {
-  //   transition: all 0.4s;
-  // }
-  // &::before,
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   height: 100%;
-  //   width: 100%;
-  //   transition: all 0.4s ease;
-  //   border-radius: 50%;
-  //   z-index: 1;
-  // }
-  // &:hover svg path {
-  //   fill: #fff;
-  // }
-  // &::after {
-  //   box-shadow: inset 0 0 0 1px #ffffff;
-  // }
-  // &::before {
-  //   background: #d01181;
-  //   box-shadow: inset 0 0 0 60px #ffffff;
-  // }
-  // &:hover::before {
-  //   box-shadow: inset 0 0 0 1px #ffffff;
-  // }
-  // &:hover::after {
-  //   box-shadow: inset 0 0 0 1px #d01181;
-  // }
 }
 
 .btn-show_more {
@@ -301,8 +275,6 @@ body {
     svg {
       width: 2.8rem;
       height: 1.5rem;
-      // width: 100%;
-      // height: 100%;
     }
   }
 
@@ -334,9 +306,6 @@ body {
     font-weight: 600;
     transition: color 0.9s ease;
   }
-  &-text_container.complex_btn-text {
-    // color: rgba(208, 17, 129, 1);
-  }
   &-hover_container.complex_btn-text {
     color: rgba(208, 17, 129, 1);
   }
@@ -348,11 +317,7 @@ body {
     height: -webkit-fill-available;
     transition: color 0.9s ease;
     svg path {
-      // width: 2.449rem;
-      // height: 1.295rem;
-      // stroke: rgba(208, 17, 129, 1);
       fill: rgba(208, 17, 129, 1);
-      // clip-path: inset(0 0 0 0);
     }
   }
   .arrow_next-hover_container {
@@ -369,9 +334,7 @@ body {
     opacity: 0;
     height: -webkit-fill-available;
     svg path {
-      // stroke: #000;
       fill: #000;
-      // clip-path: inset(0 0 0 0);
     }
   }
   .text-hover {
@@ -395,23 +358,6 @@ body {
       width: 100%;
       transition: width 1s ease;
     }
-    // .arrow_next-text_container {
-    //   position: absolute;
-    //   bottom: 0;
-    //   right: 0;
-    //   width: 0%;
-    //   // opacity: 0;
-    //   overflow: hidden;
-    //   white-space: nowrap;
-    //   transition: width 7.9s ease, opacity 0.9s ease;
-    // }
-    // .arrow_next-hover_container {
-    //   position: relative;
-    //   opacity: 1;
-    //   width: 100%;
-    //   transition: width 1s ease;
-    // }
-
     .btn-show_more--icon .arrow_fill-next {
       position: absolute;
       top: 0;
@@ -432,7 +378,6 @@ body {
         fill: rgb(0, 0, 0);
       }
       svg path {
-        // stroke: rgba(208, 17, 129, 1);
         fill: rgb(0, 0, 0);
         clip-path: inset(0 0 0 0);
       }
@@ -442,50 +387,6 @@ body {
 .complex_btn-text {
   color: #000;
 }
-
-// .btn-show {
-//   position: relative;
-//   svg {
-//     z-index: 2;
-//   }
-//   svg path {
-//     fill: #d01181;
-//     transition: all 0.4s;
-//   }
-//   &::before,
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     width: 100%;
-//     transition: all 0.4s ease;
-//     border-radius: 50%;
-//     z-index: 1;
-//   }
-//   &::after {
-//     box-shadow: inset 0 0 0 1px #ffffff;
-//   }
-//   &::before {
-//     background: #d01181;
-//     box-shadow: inset 0 0 0 8rem #ffffff;
-//   }
-//   &:hover {
-//     svg path {
-//       fill: #fff;
-//     }
-//     &::before {
-//       box-shadow: inset 0 0 0 1px #ffffff;
-//     }
-//     &::after {
-//       box-shadow: inset 0 0 0 1px #d01181;
-//     }
-//     span {
-//       color: #fff;
-//     }
-//   }
-// }
 
 .email-contacts_form {
   position: relative;
@@ -524,7 +425,22 @@ body {
     &__form {
       display: flex;
       align-items: center;
-      gap: 5rem;
+      justify-content: flex-end;
+      row-gap: 2rem;
+      column-gap: 5rem;
+      flex-wrap: wrap;
+      &-container {
+        width: 83.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--white, #fff);
+        font-size: 1.4rem;
+        font-weight: 400;
+        a {
+          font-weight: 600;
+        }
+      }
       &-inp {
         width: 12.760416vw;
         height: fit-content;
@@ -537,7 +453,7 @@ body {
           border: 1px solid #d01181;
         }
         &:last-of-type {
-          width: 37.65625vw;
+          width: 83.8rem;
         }
         &::placeholder {
           color: #fff;
@@ -740,9 +656,19 @@ body {
     &_form {
       &__form {
         flex-direction: column;
+        justify-content: start;
         align-items: start;
+        gap: 4rem;
+        &-container {
+          margin-top: 4rem;
+          flex-direction: column;
+          align-items: start;
+          font-size: 2.8rem;
+          gap: 4rem;
+        }
         &-inp {
           width: 100%;
+          height: 10.2rem;
           font-size: 3.733vw;
           &:last-of-type {
             width: 100%;

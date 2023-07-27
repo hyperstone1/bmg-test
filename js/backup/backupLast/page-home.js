@@ -163,34 +163,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let containerImg = document.createElement('div');
         let newText = document.createElement('div');
-        let newImg = document.createElement('img');
         newText.className = 'projects_slider__thumbs-item_title';
-        console.log(thumbsItems);
-        console.log(thumbsItems[4]);
-        if (thumbsItems[4]) {
-          newText.textContent = thumbsItems[4].querySelector(
-            '.projects_slider__thumbs-item_title',
-          ).textContent;
-          newImg.src = thumbsItems[4].querySelector('img').src;
-        } else {
-          newText.textContent = thumbsItems[0].querySelector(
-            '.projects_slider__thumbs-item_title',
-          ).textContent;
-          newImg.src = thumbsItems[0].querySelector('img').src;
-        }
-
-        // if (this.activeIndex !== thumbsItems.length - 1) {
-        console.log(this.activeIndex);
-
-        console.log(newImg.src);
-        // }
-        // if (this.activeIndex === thumbsItems.length - 1) {
-        //   newImg.src = thumbsItems[0].querySelector('img').src;
-        // }
+        newText.textContent = thumbsItems[0].querySelector(
+          '.projects_slider__thumbs-item_title',
+        ).textContent;
+        let newImg = document.createElement('img');
+        newImg.src = thumbsItems[0].querySelector('img').src;
         containerImg.className = 'projects_slider__thumbs-item last';
         containerImg.appendChild(newImg);
         containerImg.appendChild(newText);
-        projectsThumbs.insertBefore(containerImg, thumbsItems[4]);
+        projectsThumbs.appendChild(containerImg);
         const navArrow = document.querySelector('.swiper-button-next');
         navArrow.style.pointerEvents = 'none';
         thumbsItems.forEach((thumb, id) => {
@@ -209,8 +191,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         setTimeout(() => {
           projectsThumbs.removeChild(containerImg);
-          // projectsThumbs.appendChild(thumbsItems[this.activeIndex]);
           projectsThumbs.appendChild(thumbsItems[0]);
+          // projectsThumbs.appendChild(thumbsItems[0]);
 
           thumbsItems.forEach((thumb, id) => {
             //поправить нужно

@@ -8,7 +8,7 @@
     position: absolute;
     width: 101.5625vw;
     z-index: -1;
-    height: 100.333333vw;
+    height: 81.333333vw;
     img {
       height: 100%;
     }
@@ -305,14 +305,27 @@
       padding: 0px 9.8rem;
     }
     &__brokeridge {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
       margin-bottom: 20rem;
+      &-btn {
+        margin-top: 1.3rem;
+      }
       &_list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 7rem;
+        width: 128.1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         // flex-direction: row;
         // flex-wrap: wrap;
         // align-items: baseline;
+        &-col {
+          width: 54.1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
+        }
         &:last-child {
           align-items: start;
         }
@@ -329,7 +342,7 @@
           }
         }
         &-item {
-          width: 38.3333vw;
+          width: 54.1rem;
           display: flex;
           flex-direction: column;
           // justify-content: center;
@@ -339,19 +352,23 @@
           position: relative;
           // padding: 4rem;
           width: 100%;
-          &-title {
+          display: flex;
+          gap: 1rem;
+          &-icon {
             position: relative;
-            margin-bottom: 2.4rem;
-            font-weight: 600;
-            font-size: 1.5625vw;
-            line-height: 1.4;
-            color: #f9fbfe;
-            z-index: 2;
+            height: 1.4rem;
+            width: 0.7rem;
+            margin-top: 0.5rem;
+            svg {
+              width: 100%;
+              height: 100%;
+            }
           }
           &-text {
+            width: 52.4rem;
             position: relative;
             font-weight: 500;
-            font-size: 0.78125vw;
+            font-size: 1.8rem;
             line-height: 1.4;
             color: #f9fbfe;
             z-index: 2;
@@ -367,7 +384,7 @@
     margin-bottom: 0;
     &-gradient {
       width: 201.5625vw;
-      height: 400.333333vw;
+      height: 308.333333vw;
       left: -30rem;
       filter: blur(75px);
     }
@@ -544,10 +561,40 @@
       }
       &__brokeridge {
         margin-bottom: 20rem;
+        &-btn {
+          // display: none;
+          width: 100%;
+          height: 11.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #d01181;
+          font-size: 2.2rem;
+          font-weight: 600;
+          background-color: rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          &:hover {
+            .btn-show_more-text_container {
+              position: relative;
+              bottom: auto;
+              right: auto;
+              width: auto;
+              opacity: 1;
+            }
+          }
+          .btn-show_more--icon {
+            display: none;
+          }
+          .btn-show_more-hover_container {
+            display: none;
+          }
+        }
         &_list {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 7rem;
+          gap: 2.4rem;
+          &-col {
+            width: 100%;
+            gap: 2.4rem;
+          }
           &-gradient {
             position: absolute;
             top: 0;
@@ -564,13 +611,14 @@
             width: 100%;
           }
           &_description {
-            &-title {
-              margin-bottom: 2.4rem;
-              font-size: 3.6rem;
-              line-height: 4.6rem;
+            gap: 2rem;
+            &-icon {
+              height: 2.8rem;
+              width: 1.4rem;
             }
             &-text {
-              font-size: 2.8rem;
+              width: 100%;
+              font-size: 3.2rem;
               line-height: 1.35;
             }
           }

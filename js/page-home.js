@@ -2,20 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let galleryTop;
   let sliderAdvantages;
   let sliderServices;
-  const thumbs = [
-    './images/home/projects_1.webp',
-    './images/home/tc_vodniy.webp',
-    './images/home/bc_chayka.webp',
-    './images/home/tc_yasniy.webp',
-  ];
 
   function addSlider() {
     const width = screen.width;
-    console.log(width);
     const navigation = document.querySelector('.swiper-nav');
     const slider = document.querySelector('.swiper-slider');
-    const navigationArrowNext = document.querySelector('.swiper-slider .swiper-button-next');
-    const navigationArrowPrev = document.querySelector('.swiper-slider .swiper-button-prev');
 
     const sliderNews = new Swiper('.last_news__list', {
       slidesPerView: 'auto',
@@ -29,8 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
       galleryTop.destroy();
     }
     if (width < 768) {
-      console.log(navigation);
-
       // Если навигационной панели нету, создаем ее и стрелки для разрешения экрана меньше 768
       if (navigation === null) {
         const swiperContainer = document.querySelector('.swiper-slider');
@@ -80,70 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
         swiperContainer.removeChild(navigation);
       }
 
-      // Если нету стрелок при разрешении больше чем 768, то добавляем их
-      if (!navigationArrowNext && !navigationArrowPrev) {
-        let navNext = document.createElement('div');
-        navNext.className = 'swiper-button-next';
-        let next = document.createElement('div');
-        next.className = 'next';
-        next.innerHTML = `
-        <svg width="47" height="16" viewBox="0 0 47 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 7C0.447715 7 4.82823e-08 7.44772 0 8C-4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM46.7071 8.70711C47.0976 8.31659 47.0976 7.68342 46.7071 7.2929L40.3431 0.928936C39.9526 0.538411 39.3195 0.538411 38.9289 0.928936C38.5384 1.31946 38.5384 1.95262 38.9289 2.34315L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.70711ZM1 9L46 9L46 7L1 7L1 9Z" fill="#F9FBFE"></path>
-        </svg>
-        `;
-        let btnNext = document.createElement('span');
-        btnNext.className = 'btn-next';
-        btnNext.innerText = 'далее';
-
-        navNext.appendChild(next);
-        navNext.appendChild(btnNext);
-
-        let navPrev = document.createElement('div');
-        navPrev.className = 'swiper-button-prev';
-        let back = document.createElement('div');
-        back.className = 'back';
-        back.innerHTML = `
-        <svg width="47" height="16" viewBox="0 0 47 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 7C0.447715 7 4.82823e-08 7.44772 0 8C-4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM46.7071 8.70711C47.0976 8.31659 47.0976 7.68342 46.7071 7.2929L40.3431 0.928936C39.9526 0.538411 39.3195 0.538411 38.9289 0.928936C38.5384 1.31946 38.5384 1.95262 38.9289 2.34315L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.70711ZM1 9L46 9L46 7L1 7L1 9Z" fill="#F9FBFE"></path>
-        </svg>
-        `;
-        let btnBack = document.createElement('span');
-        btnBack.className = 'btn-back';
-        btnBack.innerText = 'назад';
-
-        navPrev.appendChild(back);
-        navPrev.appendChild(btnBack);
-
-        slider.appendChild(navNext);
-        slider.appendChild(navPrev);
-      }
-      const allThumbs = document.querySelectorAll('.swiper-thumbs .swiper-slide');
-      if (allThumbs.length < 4) {
-        thumbs.map((thumb) => {
-          const slide = document.createElement('div');
-          slide.className = 'swiper-slide';
-          const slideImg = document.createElement('img');
-          slideImg.src = `${thumb}`;
-          slide.appendChild(slideImg);
-        });
-      }
-
-      //Добавляем слайдер
-      // galleryTop = new Swiper('.swiper-slider', {
-      //   spaceBetween: 10,
-      //   navigation: {
-      //     nextEl: '.swiper-button-next',
-      //     prevEl: '.swiper-button-prev',
-      //   },
-      //   clickable: false,
-      //   thumbs: {
-      //     swiper: galleryThumbs,
-      //     clickable: false,
-      //   },
-      // });
-
-      //новое
-
       const projectsThumbs = document.querySelector('.projects_slider__thumbs');
       galleryTop = new Swiper('.swiper-slider', {
         slidesPerView: 1,
@@ -158,21 +83,19 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       galleryTop.on('realIndexChange', function () {
         const thumbsItems = document.querySelectorAll('.projects_slider__thumbs-item');
-        console.log(this.activeIndex);
-        console.log(thumbsItems[0].querySelector('img').src);
-
         let containerImg = document.createElement('div');
         let newText = document.createElement('div');
         newText.className = 'projects_slider__thumbs-item_title';
-        newText.textContent = thumbsItems[0].querySelector(
+        newText.textContent = thumbsItems[4].querySelector(
           '.projects_slider__thumbs-item_title',
         ).textContent;
         let newImg = document.createElement('img');
-        newImg.src = thumbsItems[0].querySelector('img').src;
+        newImg.src = thumbsItems[4].querySelector('img').src;
+
         containerImg.className = 'projects_slider__thumbs-item last';
         containerImg.appendChild(newImg);
         containerImg.appendChild(newText);
-        projectsThumbs.appendChild(containerImg);
+        projectsThumbs.insertBefore(containerImg, thumbsItems[4]);
         const navArrow = document.querySelector('.swiper-button-next');
         navArrow.style.pointerEvents = 'none';
         thumbsItems.forEach((thumb, id) => {
@@ -191,8 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         setTimeout(() => {
           projectsThumbs.removeChild(containerImg);
+          // projectsThumbs.appendChild(thumbsItems[this.activeIndex]);
           projectsThumbs.appendChild(thumbsItems[0]);
-          // projectsThumbs.appendChild(thumbsItems[0]);
 
           thumbsItems.forEach((thumb, id) => {
             //поправить нужно
@@ -213,26 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
       });
     }
-  }
-  function thumbsClick(e) {
-    console.log(e.target);
-    const thumb = e.target.closest('.swiper-slide');
-    const allThumbs = document.querySelectorAll('.swiper-thumbs .swiper-slide');
-    let imgs = [];
-    // allThumbs.forEach((item, id) => {
-    //   console.log(item);
-    //   let img = item.querySelector('img');
-    //   imgs.push({ id, img });
-    //   if (thumb === item) {
-    //     thumb.querySelector('img').src === ;
-    //   }
-    // });
-    allThumbs.forEach((item) => console.log(item.childNodes.src));
-    // console.log(imgs);
-
-    // thumbs.map((thumb) => {
-    //   thumb.src = './images/';
-    // });
   }
 
   function sliderForServices() {

@@ -5,9 +5,11 @@ const servicesProjects = document.querySelector('.services_list_container');
 $(document).ready(() => {
   $('.news_company__news') &&
     $('.news_company__news').on('click', (event) => {
-      console.log(event.target);
       let btnShowMoreNews = document.querySelector('.load-more-items-news');
-      if (btnShowMoreNews.contains(event.target) || btnShowMoreNews === event.target) {
+      if (
+        (btnShowMoreNews && btnShowMoreNews.contains(event.target)) ||
+        btnShowMoreNews === event.target
+      ) {
         console.log('ok');
         var targetContainer = $('.news_company__news_list'),
           url = $('.load-more-items-news').attr('data-url');
@@ -33,9 +35,11 @@ $(document).ready(() => {
 
   $('.services_list_container') &&
     $('.services_list_container').on('click', (event) => {
-      console.log(event.target);
       let btnShowMoreServ = document.querySelector('.load-more-items-services');
-      if (btnShowMoreServ.contains(event.target) || btnShowMoreServ === event.target) {
+      if (
+        (btnShowMoreServ && btnShowMoreServ.contains(event.target)) ||
+        btnShowMoreServ === event.target
+      ) {
         console.log('ok');
 
         var targetContainer = $('.services_list__projects'),
@@ -62,9 +66,10 @@ $(document).ready(() => {
   $('.portfolio_projects_container') &&
     $('.portfolio_projects_container').on('click', (event) => {
       let btnShowProjects = document.querySelector('.load-more-items');
-      console.log(event.target);
-      console.log(btnShowProjects.contains(event.target));
-      if (btnShowProjects.contains(event.target) || btnShowProjects === event.target) {
+      if (
+        (btnShowProjects && btnShowProjects.contains(event.target)) ||
+        btnShowProjects === event.target
+      ) {
         var targetContainer = $('.portfolio_projects__projects'),
           url = $('.load-more-items').attr('data-url');
 
@@ -140,13 +145,10 @@ $(document).ready(() => {
         dataType: 'html',
         data: data,
         success: function (response) {
-          if (response == 1) {
-            alert(response);
-            console.log('URa');
-          } else {
-            alert(response);
-            console.log('2');
-          }
+          const modal = $('.modal');
+          modal.find('.modal-subtitle').html(response);
+          modal.addClass('show');
+          console.log('URa');
         },
         error: function (jqXHR, textStatus, errorThrown) {},
       });
@@ -178,11 +180,11 @@ $(document).ready(() => {
     const isValid = validateComment($(this).val());
     $(this).toggleClass('invalid', !isValid);
   });
-  $('.modal-close').click(() => {
-    const modal = $(this).closest('modal');
+  $('.modal-close').click(function () {
+    const modal = $(this).closest('.modal');
     modal.addClass('modal-closing');
     setTimeout(() => {
-      modal.css('display', 'none');
+      modal.removeClass('show');
       modal.removeClass('modal-closing');
     }, 600);
   });

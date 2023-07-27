@@ -19,15 +19,27 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       containers.forEach((container) => {
         container.classList.remove('text-visible');
+      });
+      function toggleTextAndTitle(container) {
+        const title = container
+          .closest('.portfolio_projects__projects-item')
+          .querySelector('.portfolio_projects__projects_text-title');
+        container.classList.toggle('text-visible');
+        title.classList.toggle('title-border');
+      }
 
-        container.closest('.portfolio_projects__projects-item').addEventListener('click', () => {
-          const title = container
-            .closest('.portfolio_projects__projects-item')
-            .querySelector('.portfolio_projects__projects_text-title');
+      const projectsContainer = document.querySelector('.portfolio_projects_container');
 
-          container.classList.toggle('text-visible');
-          title.classList.toggle('title-border');
-        });
+      projectsContainer.addEventListener('click', (e) => {
+        const targetContainer = e.target.closest('.portfolio_projects__projects-item');
+        console.log(targetContainer);
+
+        if (targetContainer) {
+          const textContainer = targetContainer.querySelector(
+            '.portfolio_projects__projects_text-container',
+          );
+          toggleTextAndTitle(textContainer);
+        }
       });
     }
   }
