@@ -60,6 +60,9 @@
   top: auto !important;
   margin-top: 0 !important;
   width: 4.5rem !important;
+  bottom: auto !important;
+  -webkit-transform: none !important;
+          transform: none !important;
 }
 .project_details__info_container-next .next {
   width: 100%;
@@ -73,12 +76,15 @@
   display: none !important;
 }
 .project_details__info_container-prev {
+  display: block !important;
   position: relative !important;
   left: auto !important;
   right: auto !important;
   top: auto !important;
   margin-top: 0 !important;
   width: 4.5rem !important;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .project_details__info_container-prev .back {
   width: 100%;

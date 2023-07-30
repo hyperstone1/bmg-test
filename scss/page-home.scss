@@ -483,6 +483,7 @@
 .slide_item {
   position: absolute;
   width: 100%;
+  min-height: 20.5rem;
   // height: 205px;
   bottom: 0;
   display: flex;
@@ -490,13 +491,27 @@
   align-items: center;
   background-color: #ffffff;
   &-name {
+    min-height: 10.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27.1rem;
     font-weight: 700;
     font-size: 1.25vw;
     line-height: 1.4;
-    padding: 7.7rem 4.2rem 9.4rem 5rem;
+    padding: 0rem 2rem 0rem 2rem;
+    text-align: center;
+    border-right: 1px solid rgba(72, 87, 141, 0.2);
   }
   &__square {
-    padding: 7rem 4.2rem;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    min-height: 10.8rem;
+    width: 24.2rem;
+    padding: 0rem 4rem;
+    border-right: 1px solid rgba(72, 87, 141, 0.2);
   }
   .square_name {
     font-weight: 500;
@@ -509,6 +524,8 @@
     line-height: 140%;
   }
   &__description {
+    min-height: 10.8rem;
+    width: 43.4rem;
     text-align: initial;
     padding: 2rem 4.2rem;
     font-weight: 500;
@@ -938,15 +955,18 @@
     text-align: left;
     padding: 0rem 4rem;
     &-name {
+      justify-content: start;
       width: 100%;
       padding: 5rem 0rem 3.5rem 0rem;
       font-size: 4.8vw;
       border-bottom: 1px solid rgba(72, 87, 141, 0.2);
+      border-right: none;
     }
     &__square {
       width: 100%;
       padding: 1rem 0rem 1.25rem 0rem;
       border-bottom: 1px solid rgba(72, 87, 141, 0.2);
+      border-right: none;
       .square_name {
         font-size: 4.2666vw;
         color: #a1acb9;
@@ -956,6 +976,8 @@
       }
     }
     &__description {
+      width: 100%;
+      min-height: auto;
       padding: 2rem 0rem 4rem 0rem;
       font-size: 4.2666vw;
     }
